@@ -1,0 +1,196 @@
+/* authModal.css */
+
+.auth-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(10px) brightness(0.7);
+  background-color: rgba(15, 23, 42, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: fadeInOverlay 0.4s ease;
+}
+
+.auth-modal {
+  position: relative;
+  width: 90%;
+  max-width: 420px;
+  padding: 2rem;
+  background: linear-gradient(45deg, #1e293b);
+  border-radius: 1rem;
+  border: 2px solid rgba(16, 185, 129, 0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  animation: slideUpModal 0.4s ease;
+  color: white;
+}
+
+.auth-content h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #facc15;
+}
+
+.auth-content input {
+  width: 94%;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #0f172a;
+  color: white;
+  font-size: 1rem;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #ddd;
+  margin-top: 0.5rem;
+}
+
+.forgot {
+  color: #10b981;
+  cursor: pointer;
+}
+
+.yellow-btn {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #facc15;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #1e293b;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.yellow-btn:hover {
+  background-color: #fbbf24;
+  transform: scale(1.03);
+}
+
+.switch {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.switch span {
+  color: #facc15;
+  cursor: pointer;
+}
+
+.otp-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 1rem 0;
+}
+
+.otp-input {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #0f172a;
+  color: white;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.resend-otp {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+
+.resend-otp span {
+  margin-left: 10px;
+  color: #10b981;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0.2rem;
+  right: 0rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #f87171;
+}
+
+/* Animations */
+@keyframes slideUpModal {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOverlay {
+  from {
+    background-color: rgba(15, 23, 42, 0);
+  }
+  to {
+    background-color: rgba(15, 23, 42, 0.7);
+  }
+}
+
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-input {
+  width: 100%;
+  padding: 0.75rem;
+  padding-right: 2.5rem;
+  margin: 0.5rem 0;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.toggle-icon {
+  position: absolute;
+  top: 52%;
+  right: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 0.5rem;
+  user-select: none;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  /* width: ; */
+}
+
+.row .checkbox {
+  width: 20px
+}

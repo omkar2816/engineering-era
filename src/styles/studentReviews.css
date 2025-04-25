@@ -1,0 +1,138 @@
+/* General Layout */
+.student-reviews-section {
+    padding: 2rem 0rem;
+    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+    radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+    radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+    radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+    radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+    #0f172a;
+    background-size: 250% 250%;
+    animation: gradientShift 15s ease infinite;;
+    text-align: center;
+  }
+  
+  .student-reviews-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+  }
+  
+  .student-reviews-title .white-text {
+    color: #f1f5f9;
+  }
+  
+  .student-reviews-title .green-text {
+    color: #0dbb7c;
+  }
+
+  .student-reviews-title:hover {
+    .green-text {
+      color: white;
+    }
+    .white-text {
+      color: #10b981;
+    }
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  } 
+  
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-content: center; /* <-- This ensures horizontal center alignment */
+    align-items: stretch;
+    max-width: 1200px;        /* Optional: controls how wide the grid spreads */
+    margin: 0 auto;           /* Center the grid container horizontally */
+    padding: 0 1rem;
+  }  
+
+  /* Card Styling */
+  .review-card-wrapper {
+    background-color: #1e293b;
+    border-radius: 1.5rem;
+    border: 2px solid #0dbb7c;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+
+  /* .review-card-wrapper {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+  } */
+  
+  
+  .review-card-name {
+    margin-top: 0.2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f1f5f9;
+    margin-bottom: 0.2rem;
+  }
+  
+  .review-card-feedback {
+    font-size: 1rem;
+    color: #f1f5f9;
+    font-style: italic;
+  }
+  
+  /* Button Styling */
+  .review-more-btn {
+    margin-top: 40px;
+    background-color: #0dbb7c;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    /* box-shadow: 0 8px 20px rgba(13, 187, 124, 0.3); */
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .review-more-btn:hover {
+    background-color: #0a9f69;
+  }
+  
+  /* Responsive Typography */
+  @media (max-width: 768px) {
+    .student-reviews-title {
+      font-size: 2rem;
+    }
+  
+    .review-card-wrapper {
+      padding: 1.5rem 1rem;
+    }
+  
+    .review-card-name {
+      font-size: 1.1rem;
+    }
+  
+    .review-card-feedback {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .student-reviews-title {
+      font-size: 1.75rem;
+    }
+  
+    .review-more-btn {
+      font-size: 0.95rem;
+      padding: 0.7rem 1.2rem;
+    }
+  }
+  
+  .student-reviews-section {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }

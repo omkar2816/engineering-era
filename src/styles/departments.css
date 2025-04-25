@@ -1,0 +1,167 @@
+.departments-grid-container {
+    min-height: 100vh;
+    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+                radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+                radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+                radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+                radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+                #0f172a;
+    background-size: 250% 250%;
+    animation: gradientShift 30s ease infinite;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  
+  .departments-grid-title {
+    color: #cbd5e1;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    text-align: center;
+  }
+
+  .departments-grid-title:hover {
+    color: #10b981;
+  }
+  
+  .departments-grid-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  /* Sidebar - Branch list */
+  .departments-branches {
+    background: #1e293b;
+    border: 2px solid #10b981;
+    padding: 1rem;
+    margin-bottom: 50px;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 250px;
+  }
+  
+  .departments-branch-item {
+    font-weight: 600;
+    color: white;
+    padding: 0.5rem;
+    border-bottom: 1px solid #cbd5e166;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .departments-branch-item:hover {
+    color: #10b981;
+  }
+  
+  .departments-branch-item.active {
+    color: #10b981;
+    text-decoration: underline;
+  }
+  
+  /* Subjects Grid */
+  .departments-subjects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    flex: 1;
+    max-width: 900px;
+  }
+  
+  /* Subject Card */
+  .departments-subject-card {
+    background: #1e293b;
+    border: 2px solid #10b981;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 80px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .departments-subject-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .departments-subject-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .departments-subject-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #64748b;
+    transition: color 0.3s ease;
+  }
+  
+  .departments-subject-arrow {
+    font-size: 1.2rem;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .departments-subject-card:hover .departments-subject-footer {
+    color: #10b981;
+  }
+  
+  .departments-subject-card:hover .departments-subject-arrow {
+    color: #10b981;
+  }
+  
+  /* Skeleton Loader when loading */
+  .departments-subject-card.loading {
+    background: #1e293b88;
+    border: 2px dashed #10b98166;
+    animation: pulse 1.5s infinite;
+  }
+  
+  /* Animation for loader */
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+  }
+  
+  /* Gradient background animation (already declared globally, but redefining if needed) */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* Responsiveness */
+  @media (max-width: 768px) {
+    .departments-grid-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .departments-branches {
+      width: 90%;
+    }
+  
+    .departments-subjects-grid {
+      max-width: 100%;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  

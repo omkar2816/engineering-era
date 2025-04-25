@@ -1,0 +1,111 @@
+.contact-section {
+    padding: 1rem 0rem;
+    text-align: center;
+    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+              radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+              radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+              radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+              radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+              #0f172a;
+    background-size: 250% 250%;
+    animation: gradientShift 30s ease infinite;
+  }
+  
+  .section-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0rem;
+  }
+
+  .section-title:hover {
+    color: #10b981;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .section-subtitle {
+    font-size: 1.125rem;
+    color: #64748b;
+    margin-bottom: 3rem;
+  }
+
+  .section-subtitle:hover {
+    color: #10b981;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  .contact-card {
+    background: linear-gradient(135deg, #0f172a, #1e293b, #0f172a);
+    border: 2px solid #10b981;
+    border-radius: 1rem;
+    padding: 2rem;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+    max-width: 450px;
+    /* flex: 1 1 300px; */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .contact-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .contact-icon {
+    color: white;
+    margin-bottom: 0rem;
+  }
+
+  .contact-icon:hover {
+    color: #10b981;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-card h3:hover {
+    color: #10b981;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .contact-card p {
+    font-size: 1rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+  }
+
+  .contact-card p:hover {
+    color: #10b981;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .email-btn {
+    display: block;
+    background-color: #1e293b;
+    color: white;
+    border: #10b981 solid 2px;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+  }
+  
+  .email-btn:hover {
+    background-color: #10b981;
+    border: none;
+    color: #0f172a;
+  }
+  

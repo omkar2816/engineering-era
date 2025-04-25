@@ -1,0 +1,128 @@
+/* engineeringCourses.css */
+
+.courses-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+                radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+                radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+                radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+                radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+                #0f172a;
+    background-size: 250% 250%;
+    animation: gradientShift 30s ease infinite;
+    padding: 2rem 0rem;
+    overflow-x: hidden;
+    text-align: center;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .courses-title {
+    color: #f1f5f9;
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .courses-title .green-text {
+    color: #10b981;
+  }
+
+  .courses-title .white-text {
+    color: #f1f5f9;
+  }
+  
+    .courses-title:hover {
+        .green-text{
+            color: white;
+        }
+        .white-text{
+            color: #10b981;
+        }
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    }
+  
+    .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+  }  
+
+  .course-card {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    width: 230px;
+    max-width: 250px;
+    transition: all 0.3s ease-in-out;
+    border: 2px solid #10b981;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  .course-card:hover {
+    background-color: #059669;
+    color: #0f172a;
+    transform: scale(1.05);
+    border: none;
+  }
+
+  .course-card:hover .course-name {
+    color: #0f172a;
+  }
+  
+  .course-icon {
+    width: 80px;
+    height: auto;
+    margin-bottom: 0.5rem;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+  }
+
+  .course-icon:hover {
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.5));
+  }
+  
+  .course-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Responsive Tweaks */
+  @media (max-width: 768px) {
+    .courses-title {
+      font-size: 1.5rem;
+    }
+  
+    .course-card {
+      max-width: 90%;
+    }
+  }
+  
+  .courses-section {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }

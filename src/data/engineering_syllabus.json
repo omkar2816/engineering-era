@@ -1,0 +1,2623 @@
+[
+  {
+    "branch": "First Year Engineering",
+    "subjects": [
+      {
+        "subjectName": "Engineering Mathematics-I",
+        "modules": [
+          {
+            "moduleName": "Complex Numbers, Matrices, and Determinants",
+            "subtopics": [
+              "Algebra of complex numbers",
+              "Euler's theorem and polar form",
+              "Matrix operations and determinants"
+            ]
+          },
+          {
+            "moduleName": "Vector Algebra and Analytical Geometry",
+            "subtopics": [
+              "Vectors and scalars",
+              "Dot and cross products",
+              "Equations of lines and planes in space"
+            ]
+          },
+          {
+            "moduleName": "Limits, Continuity, and Differentiability",
+            "subtopics": [
+              "Definition of limits and continuity",
+              "Techniques of differentiation",
+              "Applications to tangents and normals"
+            ]
+          },
+          {
+            "moduleName": "Differential Calculus and Applications",
+            "subtopics": [
+              "Techniques of differentiation",
+              "Rate of change and optimization problems",
+              "Related rates"
+            ]
+          },
+          {
+            "moduleName": "Integral Calculus",
+            "subtopics": [
+              "Indefinite and definite integrals",
+              "Fundamental Theorem of Calculus",
+              "Applications to areas under curves"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Engineering Mathematics-II",
+        "modules": [
+          {
+            "moduleName": "First Order Differential Equations",
+            "subtopics": [
+              "Exact differential equations and integrating factors",
+              "Linear differential equations",
+              "Bernoulli\u2019s equation"
+            ]
+          },
+          {
+            "moduleName": "Higher Order Linear Differential Equations",
+            "subtopics": [
+              "Complementary function and particular integrals",
+              "Method of variation of parameters"
+            ]
+          },
+          {
+            "moduleName": "Special Functions and Differentiation Under the Integral Sign",
+            "subtopics": [
+              "Beta and Gamma functions: definitions and properties",
+              "Differentiation under constant limits"
+            ]
+          },
+          {
+            "moduleName": "Multiple Integration",
+            "subtopics": [
+              "Double integrals in Cartesian and polar coordinates",
+              "Triple integrals in cylindrical and spherical coordinates",
+              "Applications to volume and mass calculation"
+            ]
+          },
+          {
+            "moduleName": "Numerical Methods",
+            "subtopics": [
+              "Euler\u2019s method and Modified Euler method",
+              "Runge\u2013Kutta methods",
+              "Trapezoidal and Simpson\u2019s rules for numerical integration"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Engineering Physics",
+        "modules": [
+          {
+            "moduleName": "Mechanics and Dynamics",
+            "subtopics": [
+              "Kinematics of particles",
+              "Newton\u2019s laws and work-energy principles",
+              "Conservation of momentum"
+            ]
+          },
+          {
+            "moduleName": "Electricity and Magnetism",
+            "subtopics": [
+              "Coulomb\u2019s law and electric fields",
+              "Magnetic fields and electromagnetic induction",
+              "Basic circuit principles"
+            ]
+          },
+          {
+            "moduleName": "Optics and Modern Physics",
+            "subtopics": [
+              "Reflection, refraction and diffraction",
+              "Interference and polarization",
+              "Fundamental concepts of quantum physics"
+            ]
+          },
+          {
+            "moduleName": "Measurement Techniques and Error Analysis",
+            "subtopics": [
+              "Laboratory instrumentation",
+              "Uncertainty and error propagation",
+              "Data acquisition methods"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Engineering Chemistry",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Chemistry for Engineers",
+            "subtopics": [
+              "Atomic structure and chemical bonding",
+              "Periodic trends and properties of elements",
+              "Basic chemical reactions"
+            ]
+          },
+          {
+            "moduleName": "Stoichiometry and Chemical Reactions",
+            "subtopics": [
+              "Mole concept and stoichiometric calculations",
+              "Balancing chemical equations",
+              "Reaction yields and limiting reagents"
+            ]
+          },
+          {
+            "moduleName": "Material Properties and Corrosion",
+            "subtopics": [
+              "Properties of metals, non-metals, and alloys",
+              "Mechanisms of corrosion and oxidation",
+              "Protective measures and surface treatments"
+            ]
+          },
+          {
+            "moduleName": "Laboratory Techniques in Chemistry",
+            "subtopics": [
+              "Volumetric and gravimetric analysis",
+              "Spectroscopic methods",
+              "Safety practices in the chemical laboratory"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Elective Physics",
+        "modules": [
+          {
+            "moduleName": "Solid State and Semiconductor Fundamentals",
+            "subtopics": [
+              "Crystal structures and lattice concepts",
+              "Band theory and semiconductor basics",
+              "Carrier concentration and doping effects"
+            ]
+          },
+          {
+            "moduleName": "Optical Applications and Imaging",
+            "subtopics": [
+              "Principles of optical fibers and image sensors",
+              "Color measurement and matching",
+              "Techniques in modern imaging"
+            ]
+          },
+          {
+            "moduleName": "Advanced Sensing and Energy Harvesting",
+            "subtopics": [
+              "MEMS sensor technology",
+              "Piezoelectric and ultrasonic sensors",
+              "Nanotechnology applications in sensors"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Elective Chemistry",
+        "modules": [
+          {
+            "moduleName": "Engineering Materials: Alloys and Ceramics",
+            "subtopics": [
+              "Composition and properties of metals and alloys",
+              "Ceramics and their applications",
+              "Comparison of material properties"
+            ]
+          },
+          {
+            "moduleName": "Polymers and Composites",
+            "subtopics": [
+              "Thermoplastic and thermosetting polymers",
+              "Composite materials and their classifications",
+              "Applications of polymers in engineering design"
+            ]
+          },
+          {
+            "moduleName": "Nanomaterials and Green Chemistry",
+            "subtopics": [
+              "Properties of nanostructured materials",
+              "Green chemistry principles",
+              "Sustainable processes in chemical production"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Basic Electrical Engineering",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Electrical Circuits",
+            "subtopics": [
+              "Circuit elements and Ohm\u2019s law",
+              "Kirchhoff\u2019s current and voltage laws",
+              "Analysis of simple circuits"
+            ]
+          },
+          {
+            "moduleName": "DC Circuit Analysis",
+            "subtopics": [
+              "Series and parallel connections",
+              "Voltage and current dividers",
+              "DC sources and internal resistances"
+            ]
+          },
+          {
+            "moduleName": "AC Circuit Fundamentals",
+            "subtopics": [
+              "Phasor representation and impedance",
+              "AC power: real, reactive, and apparent power",
+              "Resonance in RLC circuits"
+            ]
+          },
+          {
+            "moduleName": "Electrical Machines and Transformers",
+            "subtopics": [
+              "Principles of operation of motors and generators",
+              "Basics of transformers",
+              "Performance evaluation of electrical machines"
+            ]
+          },
+          {
+            "moduleName": "Semiconductor Devices",
+            "subtopics": [
+              "Diodes and rectifiers",
+              "Transistor fundamentals and amplifiers",
+              "Applications in switching and signal processing"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Engineering Mechanics",
+        "modules": [
+          {
+            "moduleName": "Statics and Equilibrium",
+            "subtopics": [
+              "Force systems and free body diagrams",
+              "Moments, couples, and equilibrium conditions",
+              "Centroid and center of mass calculations"
+            ]
+          },
+          {
+            "moduleName": "Kinematics of Particles and Rigid Bodies",
+            "subtopics": [
+              "Linear and angular motion",
+              "Projectile and relative motion",
+              "Kinematic relationships in rigid bodies"
+            ]
+          },
+          {
+            "moduleName": "Dynamics and Energy Principles",
+            "subtopics": [
+              "Work-energy theorem and power calculations",
+              "Impulse and momentum concepts",
+              "Effects of friction and damping"
+            ]
+          },
+          {
+            "moduleName": "Fluid Mechanics Fundamentals",
+            "subtopics": [
+              "Fluid statics and pressure distribution",
+              "Buoyancy and Archimedes\u2019 principle",
+              "Introduction to fluid dynamics"
+            ]
+          },
+          {
+            "moduleName": "Laboratory Techniques in Mechanics",
+            "subtopics": [
+              "Measurement of forces and displacements",
+              "Error analysis in mechanics experiments",
+              "Use of sensors and data acquisition in dynamic systems"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "branch": "Computer Engineering",
+    "subjects": [
+      {
+        "subjectName": "Machine Learning",
+        "modules": [
+          {
+            "moduleName": "Supervised Learning",
+            "subtopics": [
+              "Regression techniques",
+              "Classification algorithms (SVM, Decision Trees, k-NN)",
+              "Loss functions and optimization strategies"
+            ]
+          },
+          {
+            "moduleName": "Unsupervised Learning",
+            "subtopics": [
+              "Clustering methods (K-means, Hierarchical clustering)",
+              "Dimensionality reduction (PCA, t-SNE)",
+              "Association rule mining"
+            ]
+          },
+          {
+            "moduleName": "Neural Networks and Deep Learning",
+            "subtopics": [
+              "Foundations of artificial neural networks",
+              "Convolutional and recurrent neural networks",
+              "Backpropagation and regularization techniques"
+            ]
+          },
+          {
+            "moduleName": "Model Evaluation and Selection",
+            "subtopics": [
+              "Cross-validation techniques",
+              "Performance metrics (accuracy, precision, recall)",
+              "Bias-variance trade-off and model complexity"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Big Data Analytics",
+        "modules": [
+          {
+            "moduleName": "Big Data Ecosystem",
+            "subtopics": [
+              "Overview of Hadoop and Spark ecosystems",
+              "MapReduce programming model",
+              "Distributed file systems (HDFS)"
+            ]
+          },
+          {
+            "moduleName": "Data Storage and Management",
+            "subtopics": [
+              "NoSQL databases and data models",
+              "Data warehousing concepts",
+              "Scalability and distributed storage"
+            ]
+          },
+          {
+            "moduleName": "Data Processing Frameworks",
+            "subtopics": [
+              "Batch vs. real-time processing",
+              "Spark SQL and streaming analytics",
+              "Data integration techniques"
+            ]
+          },
+          {
+            "moduleName": "Analytics and Visualization",
+            "subtopics": [
+              "Statistical analysis on large datasets",
+              "Visualization tools and techniques",
+              "Industry case studies and applications"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "System Programming, Compiler and Construction",
+        "modules": [
+          {
+            "moduleName": "Lexical Analysis and Parsing",
+            "subtopics": [
+              "Tokenization using regular expressions",
+              "Grammar definitions and parsing techniques",
+              "Syntax trees and abstract syntax trees"
+            ]
+          },
+          {
+            "moduleName": "Semantic Analysis and Intermediate Code Generation",
+            "subtopics": [
+              "Type checking and symbol tables",
+              "Construction of intermediate representations",
+              "Basic code optimization techniques"
+            ]
+          },
+          {
+            "moduleName": "Compiler Architecture and Construction",
+            "subtopics": [
+              "Compiler front-end vs. back-end design",
+              "Role of linkers, loaders, and assemblers",
+              "Interpreters and runtime environments"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Cryptography and System Security",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Cryptography",
+            "subtopics": [
+              "Symmetric and asymmetric encryption algorithms",
+              "Block ciphers and stream ciphers",
+              "Public key infrastructures"
+            ]
+          },
+          {
+            "moduleName": "Hash Functions and Digital Signatures",
+            "subtopics": [
+              "Properties of cryptographic hash functions",
+              "Digital signature schemes",
+              "Applications of cryptographic primitives"
+            ]
+          },
+          {
+            "moduleName": "System and Network Security",
+            "subtopics": [
+              "Authentication and access control mechanisms",
+              "Security protocols and VPNs",
+              "Intrusion detection and prevention"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Mobile Computing",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Mobile Communication",
+            "subtopics": [
+              "Mobile network architectures",
+              "Cellular concepts and frequency reuse",
+              "Overview of 3G/4G/5G standards"
+            ]
+          },
+          {
+            "moduleName": "Wireless Protocols and Data Transmission",
+            "subtopics": [
+              "Bluetooth, Wi-Fi, and NFC technologies",
+              "Mobile IP and handoff techniques",
+              "Quality of Service (QoS) considerations"
+            ]
+          },
+          {
+            "moduleName": "Mobile Application Development",
+            "subtopics": [
+              "Development frameworks for mobile platforms",
+              "User interface design for mobile apps",
+              "Integration with mobile sensors and APIs"
+            ]
+          },
+          {
+            "moduleName": "Emerging Trends in Mobile Computing",
+            "subtopics": [
+              "Internet of Things (IoT) integration",
+              "Edge computing for mobile devices",
+              "Security issues in mobile platforms"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Artificial Intelligence",
+        "modules": [
+          {
+            "moduleName": "Knowledge Representation and Reasoning",
+            "subtopics": [
+              "Logical representation techniques",
+              "Semantic networks and ontologies",
+              "Rule-based and case-based reasoning"
+            ]
+          },
+          {
+            "moduleName": "Search and Optimization Strategies",
+            "subtopics": [
+              "Uninformed and heuristic search algorithms",
+              "Optimization techniques and metaheuristics",
+              "Graph search and constraint satisfaction"
+            ]
+          },
+          {
+            "moduleName": "Machine Learning Foundations",
+            "subtopics": [
+              "Supervised and unsupervised learning basics",
+              "Neural networks and probabilistic models",
+              "Evaluation metrics and model selection"
+            ]
+          },
+          {
+            "moduleName": "Planning, Decision Making and Advanced AI Topics",
+            "subtopics": [
+              "Game theory and decision trees",
+              "Introduction to reinforcement learning",
+              "Trends in deep learning and AI applications"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Networks",
+        "modules": [
+          {
+            "moduleName": "Network Fundamentals",
+            "subtopics": [
+              "OSI and TCP/IP models",
+              "Data transmission, switching and routing basics",
+              "LANs, WANs, and network topologies"
+            ]
+          },
+          {
+            "moduleName": "Routing, Switching, and Congestion Control",
+            "subtopics": [
+              "Routing protocols (OSPF, BGP)",
+              "Switching techniques and VLANs",
+              "Traffic management and congestion avoidance"
+            ]
+          },
+          {
+            "moduleName": "Wireless and Mobile Networks",
+            "subtopics": [
+              "Design of wireless LANs",
+              "Mobile IP and ad hoc networks",
+              "Quality of Service and security in mobile networks"
+            ]
+          },
+          {
+            "moduleName": "Network Security and Management",
+            "subtopics": [
+              "Encryption and VPN technologies",
+              "Network monitoring and intrusion detection",
+              "Network performance and fault tolerance"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Software Engineering",
+        "modules": [
+          {
+            "moduleName": "Software Development Life Cycle",
+            "subtopics": [
+              "Requirements gathering and analysis",
+              "Design methodologies and software modeling",
+              "Implementation, testing, and maintenance"
+            ]
+          },
+          {
+            "moduleName": "Project Management and Agile Methodologies",
+            "subtopics": [
+              "Agile, Scrum, and Kanban frameworks",
+              "Risk management and quality assurance",
+              "Version control and continuous integration"
+            ]
+          },
+          {
+            "moduleName": "Software Design and Architecture",
+            "subtopics": [
+              "Design patterns and architectural styles",
+              "Modularity, scalability, and maintainability",
+              "Case studies and industry best practices"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Warehouse & Data Mining",
+        "modules": [
+          {
+            "moduleName": "Data Warehousing Concepts",
+            "subtopics": [
+              "Architecture of data warehouses",
+              "ETL processes and data modeling",
+              "OLAP vs. OLTP and warehouse design"
+            ]
+          },
+          {
+            "moduleName": "Data Mining Techniques",
+            "subtopics": [
+              "Classification, clustering, and association rules",
+              "Anomaly detection and regression",
+              "Evaluation metrics and mining tools"
+            ]
+          },
+          {
+            "moduleName": "Knowledge Discovery and Business Intelligence",
+            "subtopics": [
+              "Data preprocessing and transformation",
+              "Data visualization and reporting",
+              "Case studies in business analytics"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Theoretical Computer Science",
+        "modules": [
+          {
+            "moduleName": "Formal Languages and Automata",
+            "subtopics": [
+              "Regular expressions, finite automata",
+              "Context-free grammars and pushdown automata",
+              "Introduction to Turing machines"
+            ]
+          },
+          {
+            "moduleName": "Computability and Complexity",
+            "subtopics": [
+              "Models of computation and decidability",
+              "Complexity classes (P, NP, NP-complete)",
+              "Reductions and intractability"
+            ]
+          },
+          {
+            "moduleName": "Logic and Boolean Algebra",
+            "subtopics": [
+              "Propositional and predicate logic",
+              "Boolean functions and minimization",
+              "Applications in circuit design and verification"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Analysis of Algorithms",
+        "modules": [
+          {
+            "moduleName": "Algorithm Design Techniques",
+            "subtopics": [
+              "Divide and conquer, greedy, dynamic programming",
+              "Backtracking and branch-and-bound methods"
+            ]
+          },
+          {
+            "moduleName": "Complexity Analysis",
+            "subtopics": [
+              "Time and space complexity",
+              "Big O, Theta, and Omega notations",
+              "Worst-case and average-case analysis"
+            ]
+          },
+          {
+            "moduleName": "Classic Algorithms and NP-Completeness",
+            "subtopics": [
+              "Sorting, searching, and graph algorithms",
+              "Introduction to NP-completeness",
+              "Approximation and heuristic methods"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Structures",
+        "modules": [
+          {
+            "moduleName": "Fundamental Data Structures",
+            "subtopics": [
+              "Arrays, linked lists, stacks, and queues",
+              "Trees, heaps, and graphs",
+              "Hash tables and dictionaries"
+            ]
+          },
+          {
+            "moduleName": "Algorithms on Data Structures",
+            "subtopics": [
+              "Traversal, insertion, deletion, and searching techniques",
+              "Sorting algorithms using data structures",
+              "Dynamic data structures and memory management"
+            ]
+          },
+          {
+            "moduleName": "Advanced Data Structures",
+            "subtopics": [
+              "Balanced trees (AVL, Red-Black Trees)",
+              "B-trees, tries and graph-based structures",
+              "Applications in database and network processing"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Operating Systems",
+        "modules": [
+          {
+            "moduleName": "Process and Thread Management",
+            "subtopics": [
+              "Process scheduling and context switching",
+              "Inter-process communication",
+              "Multithreading and concurrency"
+            ]
+          },
+          {
+            "moduleName": "Memory Management and Virtualization",
+            "subtopics": [
+              "Paging, segmentation, and virtual memory",
+              "Memory allocation strategies and protection",
+              "Cache organization and performance"
+            ]
+          },
+          {
+            "moduleName": "File Systems and I/O Management",
+            "subtopics": [
+              "File organization, storage structures, and access methods",
+              "Disk scheduling algorithms",
+              "RAID architectures and device drivers"
+            ]
+          },
+          {
+            "moduleName": "Concurrency, Deadlock, and OS Security",
+            "subtopics": [
+              "Deadlock conditions and prevention techniques",
+              "Synchronization mechanisms",
+              "Security aspects in operating systems"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Digital Logic and Computer Architecture",
+        "modules": [
+          {
+            "moduleName": "Digital Logic Fundamentals",
+            "subtopics": [
+              "Boolean algebra and logic gates",
+              "Combinational circuits and minimization using Karnaugh Maps",
+              "Sequential circuits: flip-flops, counters, and registers"
+            ]
+          },
+          {
+            "moduleName": "Computer Architecture Concepts",
+            "subtopics": [
+              "Processor design and instruction set architecture",
+              "Pipelining, caching, and memory hierarchy",
+              "RISC vs. CISC architecture principles"
+            ]
+          },
+          {
+            "moduleName": "Microprocessor and Assembly Language",
+            "subtopics": [
+              "Overview of microprocessor architecture",
+              "Assembly programming fundamentals",
+              "Interfacing and embedded system applications"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Database Management System",
+        "modules": [
+          {
+            "moduleName": "Relational Database Concepts",
+            "subtopics": [
+              "Entity-relationship model",
+              "Normalization and schema design",
+              "SQL and relational algebra"
+            ]
+          },
+          {
+            "moduleName": "Transaction Management and Concurrency Control",
+            "subtopics": [
+              "ACID properties",
+              "Locking mechanisms and recovery protocols",
+              "Distributed database considerations"
+            ]
+          },
+          {
+            "moduleName": "Emerging Database Technologies",
+            "subtopics": [
+              "NoSQL databases and cloud-based solutions",
+              "Data warehousing and business intelligence",
+              "Future trends in database management"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Microprocessor",
+        "modules": [
+          {
+            "moduleName": "Microprocessor Architecture",
+            "subtopics": [
+              "Overview of microprocessor design and organization",
+              "Instruction set architecture",
+              "Internal registers and buses"
+            ]
+          },
+          {
+            "moduleName": "Assembly Language Programming",
+            "subtopics": [
+              "Basic programming constructs and instructions",
+              "Memory addressing modes",
+              "Arithmetic and control instructions"
+            ]
+          },
+          {
+            "moduleName": "Peripheral Interfacing and Applications",
+            "subtopics": [
+              "Techniques for I/O interfacing",
+              "Timers, counters, and communication protocols",
+              "Embedded system applications"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Discrete Structures and Graph Theory",
+        "modules": [
+          {
+            "moduleName": "Foundations of Discrete Mathematics",
+            "subtopics": [
+              "Sets, relations, and functions",
+              "Propositional and predicate logic",
+              "Proof techniques and mathematical induction"
+            ]
+          },
+          {
+            "moduleName": "Combinatorics and Probability",
+            "subtopics": [
+              "Counting principles, permutations, and combinations",
+              "Binomial theorem and recurrence relations",
+              "Basic probability concepts and distributions"
+            ]
+          },
+          {
+            "moduleName": "Graph Theory",
+            "subtopics": [
+              "Graph terminology and representations",
+              "Trees, connectivity, and cycles",
+              "Graph traversal (BFS, DFS) and algorithmic applications"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Graphics",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Computer Graphics",
+            "subtopics": [
+              "Graphics primitives and color models",
+              "2D transformations and clipping algorithms",
+              "Rasterization techniques"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "branch": "Information Technology",
+    "subjects": [
+      {
+        "subjectName": "Applied Mathematics-III",
+        "modules": [
+          {
+            "moduleName": "Complex Variables and Linear Algebra",
+            "subtopics": [
+              "Complex numbers, polar and exponential forms",
+              "Matrix operations and determinants",
+              "Eigenvalues and eigenvectors"
+            ]
+          },
+          {
+            "moduleName": "Fourier Analysis and Laplace Transforms",
+            "subtopics": [
+              "Fourier series and Fourier transform",
+              "Properties and applications",
+              "Laplace transform and its applications in differential equations"
+            ]
+          },
+          {
+            "moduleName": "Probability, Statistics and Numerical Methods",
+            "subtopics": [
+              "Probability distributions and random variables",
+              "Statistical measures and central limit theorem",
+              "Numerical interpolation and integration methods"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Structure and Algorithm Analysis",
+        "modules": [
+          {
+            "moduleName": "Fundamental Data Structures",
+            "subtopics": [
+              "Arrays, linked lists, stacks and queues",
+              "Basic operations and memory usage"
+            ]
+          },
+          {
+            "moduleName": "Trees and Graphs",
+            "subtopics": [
+              "Binary trees, balanced trees, and heaps",
+              "Graph representations and traversals"
+            ]
+          },
+          {
+            "moduleName": "Algorithm Analysis and Complexity",
+            "subtopics": [
+              "Time and space complexity analysis",
+              "Big-O notation and recurrence relations"
+            ]
+          },
+          {
+            "moduleName": "Sorting and Searching",
+            "subtopics": [
+              "Comparison-based sorting algorithms",
+              "Hashing and search techniques",
+              "Divide-and-conquer methods"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Database Management System",
+        "modules": [
+          {
+            "moduleName": "Relational Database Concepts",
+            "subtopics": [
+              "Entity-Relationship modeling",
+              "Relational algebra and normalization",
+              "SQL querying and data integrity"
+            ]
+          },
+          {
+            "moduleName": "Transaction Management and Concurrency",
+            "subtopics": [
+              "ACID properties",
+              "Locking and recovery mechanisms"
+            ]
+          },
+          {
+            "moduleName": "Distributed and Emerging Databases",
+            "subtopics": [
+              "NoSQL databases",
+              "Data warehousing and OLAP",
+              "Cloud-based database solutions"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Principle of Communication Paradigms and Computer Fundamentals",
+        "modules": [
+          {
+            "moduleName": "Communication Paradigms",
+            "subtopics": [
+              "Analog vs. digital communication",
+              "Modulation techniques and transmission media",
+              "Basic protocols and signal encoding"
+            ]
+          },
+          {
+            "moduleName": "Computer Fundamentals",
+            "subtopics": [
+              "Binary systems and Boolean algebra",
+              "Logic gates, combinational and sequential circuits",
+              "Basic computer hardware components and architecture"
+            ]
+          },
+          {
+            "moduleName": "Introduction to Software Tools",
+            "subtopics": [
+              "Assembly language fundamentals",
+              "Overview of operating environment and system software"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Applied Mathematics-IV",
+        "modules": [
+          {
+            "moduleName": "Advanced Differential Equations and Transforms",
+            "subtopics": [
+              "Higher order differential equations",
+              "Laplace and Fourier transforms for solving DEs"
+            ]
+          },
+          {
+            "moduleName": "Complex Analysis",
+            "subtopics": [
+              "Analytic functions and contour integration",
+              "Residue theorem and applications"
+            ]
+          },
+          {
+            "moduleName": "Numerical Optimization and Approximation",
+            "subtopics": [
+              "Numerical methods for optimization",
+              "Error and convergence analysis"
+            ]
+          },
+          {
+            "moduleName": "Probability and Random Processes",
+            "subtopics": [
+              "Advanced probability theory",
+              "Random processes and statistical inference"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Organization and Architecture",
+        "modules": [
+          {
+            "moduleName": "Digital Logic and Basic Components",
+            "subtopics": [
+              "Boolean algebra, logic gates, flip-flops",
+              "Combinational and sequential circuits"
+            ]
+          },
+          {
+            "moduleName": "Processor Design and Instruction Sets",
+            "subtopics": [
+              "CPU organization and microarchitecture",
+              "RISC vs. CISC and instruction pipelining"
+            ]
+          },
+          {
+            "moduleName": "Memory Hierarchy and I/O Systems",
+            "subtopics": [
+              "Cache, main memory, and secondary storage",
+              "I/O interfacing and bus structures"
+            ]
+          },
+          {
+            "moduleName": "Parallel and Distributed Architectures",
+            "subtopics": [
+              "Multicore processors, pipelining, and vector processing",
+              "Basics of distributed computing"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Operating System",
+        "modules": [
+          {
+            "moduleName": "Process and Thread Management",
+            "subtopics": [
+              "Process scheduling and context switching",
+              "Multithreading and concurrency control"
+            ]
+          },
+          {
+            "moduleName": "Memory Management",
+            "subtopics": [
+              "Paging, segmentation and virtual memory",
+              "Memory allocation and protection techniques"
+            ]
+          },
+          {
+            "moduleName": "File Systems and I/O",
+            "subtopics": [
+              "File organization, storage structures, and disk scheduling",
+              "Device management and RAID configurations"
+            ]
+          },
+          {
+            "moduleName": "Synchronization and Deadlock",
+            "subtopics": [
+              "Concurrency mechanisms, semaphores, and mutexes",
+              "Deadlock detection, prevention and recovery"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Automata Theory",
+        "modules": [
+          {
+            "moduleName": "Formal Languages and Grammars",
+            "subtopics": [
+              "Regular languages and finite automata",
+              "Context-free grammars and pushdown automata"
+            ]
+          },
+          {
+            "moduleName": "Computational Models",
+            "subtopics": [
+              "Turing machines and decidability",
+              "Chomsky hierarchy"
+            ]
+          },
+          {
+            "moduleName": "Complexity and Decidability",
+            "subtopics": [
+              "Decidability, reducibility, and NP-completeness",
+              "Applications to compiler design"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Networks",
+        "modules": [
+          {
+            "moduleName": "Network Fundamentals and Protocols",
+            "subtopics": [
+              "OSI and TCP/IP models",
+              "Packet switching and routing fundamentals",
+              "LANs, WANs and network topologies"
+            ]
+          },
+          {
+            "moduleName": "Routing, Switching, and Addressing",
+            "subtopics": [
+              "Routing protocols and algorithms",
+              "Switching and subnetting",
+              "IP addressing and VPNs"
+            ]
+          },
+          {
+            "moduleName": "Wireless and Mobile Networks",
+            "subtopics": [
+              "Design and architecture of wireless networks",
+              "Mobile communication and emerging standards",
+              "QoS and security considerations"
+            ]
+          },
+          {
+            "moduleName": "Network Management and Security",
+            "subtopics": [
+              "Network monitoring and performance optimization",
+              "Security protocols and intrusion detection"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Internet Programming",
+        "modules": [
+          {
+            "moduleName": "Client-Server Architectures and Protocols",
+            "subtopics": [
+              "HTTP/HTTPS protocols and RESTful services",
+              "Web servers and client interactions"
+            ]
+          },
+          {
+            "moduleName": "Front-End Web Development",
+            "subtopics": [
+              "HTML, CSS, and JavaScript fundamentals",
+              "Responsive design and modern frameworks"
+            ]
+          },
+          {
+            "moduleName": "Back-End Development",
+            "subtopics": [
+              "Server-side programming languages",
+              "Database connectivity and application integration"
+            ]
+          },
+          {
+            "moduleName": "Security and Deployment in Web Applications",
+            "subtopics": [
+              "Authentication and authorization",
+              "SSL/TLS and secure coding practices",
+              "Deployment on cloud platforms"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Network Security",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Network Security",
+            "subtopics": [
+              "Encryption techniques and cryptographic protocols",
+              "Firewalls and secure network architectures"
+            ]
+          },
+          {
+            "moduleName": "Threats, Vulnerabilities and Risk Management",
+            "subtopics": [
+              "Malware, DDoS, and intrusion detection systems",
+              "Risk assessment and vulnerability management"
+            ]
+          },
+          {
+            "moduleName": "Secure Network Design and Monitoring",
+            "subtopics": [
+              "Access control mechanisms and VPNs",
+              "Network monitoring and incident response"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Software Engineering",
+        "modules": [
+          {
+            "moduleName": "Software Development Life Cycle",
+            "subtopics": [
+              "Requirements analysis and design",
+              "Implementation, testing, and maintenance",
+              "Agile and iterative development processes"
+            ]
+          },
+          {
+            "moduleName": "Project Management and Quality Assurance",
+            "subtopics": [
+              "Agile, Scrum and Kanban methodologies",
+              "Risk management and project planning"
+            ]
+          },
+          {
+            "moduleName": "Software Design and Architecture",
+            "subtopics": [
+              "Design patterns and principles",
+              "Modularity, scalability, and case studies"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Advance Data Management Technologies",
+        "modules": [
+          {
+            "moduleName": "Advanced Database Concepts",
+            "subtopics": [
+              "Distributed databases and data consistency",
+              "NoSQL and NewSQL systems"
+            ]
+          },
+          {
+            "moduleName": "Data Warehousing and OLAP",
+            "subtopics": [
+              "ETL processes and multidimensional data modeling",
+              "OLAP vs. OLTP and warehouse design principles"
+            ]
+          },
+          {
+            "moduleName": "Big Data Platforms",
+            "subtopics": [
+              "Hadoop, Spark and cloud-based data solutions",
+              "Real-time data processing and scalability"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Mining & Business Intelligence",
+        "modules": [
+          {
+            "moduleName": "Data Mining Techniques",
+            "subtopics": [
+              "Classification, clustering, and regression",
+              "Association rules and pattern discovery",
+              "Preprocessing and feature selection"
+            ]
+          },
+          {
+            "moduleName": "Business Intelligence and Visualization",
+            "subtopics": [
+              "Dashboards, reporting tools and OLAP analysis",
+              "Data visualization techniques and case studies"
+            ]
+          },
+          {
+            "moduleName": "Predictive Analytics and Advanced Applications",
+            "subtopics": [
+              "Predictive modeling and forecasting",
+              "Integration with machine learning methods"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Web X",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Web Technologies",
+            "subtopics": [
+              "HTML, CSS, and JavaScript basics",
+              "Responsive design principles",
+              "Client-server interaction"
+            ]
+          },
+          {
+            "moduleName": "Web Application Development",
+            "subtopics": [
+              "Front-end frameworks and libraries",
+              "Server-side scripting and RESTful APIs"
+            ]
+          },
+          {
+            "moduleName": "Modern Web Services and Cloud Integration",
+            "subtopics": [
+              "Microservices architecture",
+              "Cloud deployment and scalability"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Wireless Technology",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Wireless Communication",
+            "subtopics": [
+              "Basic principles and techniques",
+              "RF fundamentals and spectrum management"
+            ]
+          },
+          {
+            "moduleName": "Mobile and Emerging Wireless Standards",
+            "subtopics": [
+              "LTE, 5G and IoT connectivity",
+              "Wireless protocols such as Wi-Fi and Bluetooth"
+            ]
+          },
+          {
+            "moduleName": "Wireless Network Management and Security",
+            "subtopics": [
+              "Quality of Service (QoS) in wireless networks",
+              "Security issues and mitigation techniques"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "AI and DS \u2013 1",
+        "modules": [
+          {
+            "moduleName": "Foundations of Artificial Intelligence",
+            "subtopics": [
+              "History and evolution of AI",
+              "Knowledge representation and reasoning",
+              "Search techniques"
+            ]
+          },
+          {
+            "moduleName": "Machine Learning Fundamentals",
+            "subtopics": [
+              "Supervised vs. unsupervised learning",
+              "Regression and classification techniques",
+              "Neural network basics"
+            ]
+          },
+          {
+            "moduleName": "Data Science Essentials",
+            "subtopics": [
+              "Data preprocessing and cleaning",
+              "Statistical analysis and data visualization"
+            ]
+          },
+          {
+            "moduleName": "Ethical and Social Implications of AI",
+            "subtopics": [
+              "Bias and fairness in algorithms",
+              "Data privacy and ethical challenges"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Ethical Hacking and Forensic",
+        "modules": [
+          {
+            "moduleName": "Cybersecurity Fundamentals",
+            "subtopics": [
+              "Principles of cybersecurity",
+              "Threat identification and risk management"
+            ]
+          },
+          {
+            "moduleName": "Penetration Testing Techniques",
+            "subtopics": [
+              "Reconnaissance and vulnerability assessment",
+              "Exploitation and post-exploitation methods"
+            ]
+          },
+          {
+            "moduleName": "Digital Forensics",
+            "subtopics": [
+              "Evidence collection and preservation",
+              "Forensic analysis tools and techniques"
+            ]
+          },
+          {
+            "moduleName": "Legal and Ethical Aspects in Cybersecurity",
+            "subtopics": [
+              "Cyber law and regulations",
+              "Ethical guidelines and case studies"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "branch": "AI & DS Engineering",
+    "subjects": [
+      {
+        "subjectName": "Applied Mathematics-III",
+        "modules": [
+          {
+            "moduleName": "Complex Variables and Linear Algebra",
+            "subtopics": [
+              "Complex numbers, polar and exponential forms",
+              "Matrix operations and determinants",
+              "Eigenvalues and eigenvectors"
+            ]
+          },
+          {
+            "moduleName": "Fourier and Laplace Transforms",
+            "subtopics": [
+              "Fourier series and transform",
+              "Laplace transform and its applications",
+              "Inverse transform techniques"
+            ]
+          },
+          {
+            "moduleName": "Probability, Statistics and Numerical Methods",
+            "subtopics": [
+              "Basic probability distributions",
+              "Statistical measures and hypothesis testing",
+              "Numerical integration and interpolation"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Applied Mathematics-IV",
+        "modules": [
+          {
+            "moduleName": "Advanced Differential Equations and Transforms",
+            "subtopics": [
+              "Higher order differential equations",
+              "Laplace and Fourier transforms for solving DEs",
+              "Initial and boundary value problems"
+            ]
+          },
+          {
+            "moduleName": "Complex Analysis and Contour Integration",
+            "subtopics": [
+              "Analytic functions and Cauchy\u2019s theorem",
+              "Contour integration and residue theorem",
+              "Applications to real integrals"
+            ]
+          },
+          {
+            "moduleName": "Numerical Optimization and Approximation Theory",
+            "subtopics": [
+              "Iterative methods for optimization",
+              "Error, convergence analysis and approximation techniques",
+              "Least squares and polynomial approximations"
+            ]
+          },
+          {
+            "moduleName": "Advanced Probability and Random Processes",
+            "subtopics": [
+              "Random variables and stochastic processes",
+              "Markov chains and Poisson processes",
+              "Applications to engineering problems"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Operating System",
+        "modules": [
+          {
+            "moduleName": "Process and Thread Management",
+            "subtopics": [
+              "Process scheduling and context switching",
+              "Inter-process communication",
+              "Multithreading and concurrency models"
+            ]
+          },
+          {
+            "moduleName": "Memory Management and Virtualization",
+            "subtopics": [
+              "Paging, segmentation, and virtual memory",
+              "Memory allocation and protection strategies",
+              "Cache organization and performance"
+            ]
+          },
+          {
+            "moduleName": "File Systems and I/O Management",
+            "subtopics": [
+              "File organization and storage structures",
+              "Disk scheduling algorithms",
+              "RAID architectures and device drivers"
+            ]
+          },
+          {
+            "moduleName": "Synchronization and Deadlock",
+            "subtopics": [
+              "Semaphores, mutexes and monitors",
+              "Deadlock detection and prevention",
+              "Resource management techniques"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Warehouse & Mining",
+        "modules": [
+          {
+            "moduleName": "Data Warehousing Architecture",
+            "subtopics": [
+              "Concepts of OLAP and OLTP",
+              "Warehouse design and schema modeling",
+              "ETL processes and data integration"
+            ]
+          },
+          {
+            "moduleName": "Data Mining Techniques",
+            "subtopics": [
+              "Classification and clustering algorithms",
+              "Association rule mining and pattern discovery",
+              "Preprocessing and feature extraction"
+            ]
+          },
+          {
+            "moduleName": "Business Intelligence and Visualization",
+            "subtopics": [
+              "Data reporting and dashboard design",
+              "Visual data analytics tools",
+              "Case studies in business intelligence"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Analysis of Algorithms",
+        "modules": [
+          {
+            "moduleName": "Algorithm Design Techniques",
+            "subtopics": [
+              "Divide and conquer, greedy and dynamic programming",
+              "Backtracking and branch-and-bound",
+              "Randomized algorithms"
+            ]
+          },
+          {
+            "moduleName": "Complexity Analysis",
+            "subtopics": [
+              "Time and space complexity",
+              "Big-O, Theta, and Omega notations",
+              "Worst-case and average-case analysis"
+            ]
+          },
+          {
+            "moduleName": "Advanced Algorithmic Concepts",
+            "subtopics": [
+              "Graph algorithms and network flow",
+              "NP-completeness and approximation algorithms",
+              "Heuristics and metaheuristics"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Structures",
+        "modules": [
+          {
+            "moduleName": "Fundamental Data Structures",
+            "subtopics": [
+              "Arrays, stacks, queues, and linked lists",
+              "Trees, heaps, and graphs",
+              "Hash tables and dictionaries"
+            ]
+          },
+          {
+            "moduleName": "Algorithms on Data Structures",
+            "subtopics": [
+              "Traversal, insertion, deletion, and searching",
+              "Sorting algorithms using data structures",
+              "Recursion and dynamic data structures"
+            ]
+          },
+          {
+            "moduleName": "Advanced Data Structures",
+            "subtopics": [
+              "Balanced trees (AVL, Red-Black Trees)",
+              "B-trees, tries, and segment trees",
+              "Applications in databases and networks"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Digital Logic and Computer Architecture",
+        "modules": [
+          {
+            "moduleName": "Digital Logic Fundamentals",
+            "subtopics": [
+              "Boolean algebra, logic gates, and truth tables",
+              "Combinational logic circuits and minimization techniques",
+              "Sequential logic: flip-flops, counters, and registers"
+            ]
+          },
+          {
+            "moduleName": "Computer Architecture",
+            "subtopics": [
+              "Processor design and instruction set architecture",
+              "Pipelining, caching, and memory hierarchy",
+              "RISC vs. CISC concepts"
+            ]
+          },
+          {
+            "moduleName": "Microarchitecture and I/O Systems",
+            "subtopics": [
+              "Internal buses and communication protocols",
+              "Peripheral interfacing and embedded components",
+              "Performance measurement and design tradeoffs"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Database Management System",
+        "modules": [
+          {
+            "moduleName": "Relational Database Concepts",
+            "subtopics": [
+              "ER modeling and relational schema design",
+              "Normalization and SQL querying",
+              "Relational algebra and constraints"
+            ]
+          },
+          {
+            "moduleName": "Transaction Management",
+            "subtopics": [
+              "ACID properties and concurrency control",
+              "Locking mechanisms and recovery techniques"
+            ]
+          },
+          {
+            "moduleName": "Advanced and Distributed Database Systems",
+            "subtopics": [
+              "NoSQL databases and cloud solutions",
+              "Data warehousing and distributed query processing",
+              "Emerging trends in database technology"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Microprocessor",
+        "modules": [
+          {
+            "moduleName": "Microprocessor Architecture",
+            "subtopics": [
+              "Internal organization and instruction sets",
+              "Registers, buses, and control units",
+              "Microprocessor operating modes"
+            ]
+          },
+          {
+            "moduleName": "Assembly Language Programming",
+            "subtopics": [
+              "Basic instructions and addressing modes",
+              "Program control and loops",
+              "Simple I/O operations and interfacing"
+            ]
+          },
+          {
+            "moduleName": "Peripheral Interfacing and Embedded Applications",
+            "subtopics": [
+              "Techniques for interfacing external devices",
+              "Timers, counters, and communication protocols",
+              "Case studies in embedded system design"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Discrete Structure and Graph Theory",
+        "modules": [
+          {
+            "moduleName": "Foundations of Discrete Mathematics",
+            "subtopics": [
+              "Sets, relations, and functions",
+              "Propositional and predicate logic",
+              "Proof techniques and mathematical induction"
+            ]
+          },
+          {
+            "moduleName": "Combinatorics and Probability",
+            "subtopics": [
+              "Counting principles, permutations and combinations",
+              "Binomial theorem and recurrences",
+              "Basic probability theory"
+            ]
+          },
+          {
+            "moduleName": "Graph Theory",
+            "subtopics": [
+              "Graph representations and terminology",
+              "Trees, connectivity and graph traversals (BFS, DFS)",
+              "Planarity and graph algorithms"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Graphics",
+        "modules": [
+          {
+            "moduleName": "2D Graphics Fundamentals",
+            "subtopics": [
+              "Graphics primitives and coordinate systems",
+              "2D transformations and clipping algorithms",
+              "Rasterization techniques"
+            ]
+          },
+          {
+            "moduleName": "3D Graphics and Rendering",
+            "subtopics": [
+              "3D transformations and projection methods",
+              "Lighting, shading, and texture mapping",
+              "Rendering pipeline concepts"
+            ]
+          },
+          {
+            "moduleName": "Animation and Visualization",
+            "subtopics": [
+              "Principles of animation",
+              "Data visualization techniques",
+              "Virtual reality and interactive graphics"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Artificial Intelligence",
+        "modules": [
+          {
+            "moduleName": "Foundations of AI",
+            "subtopics": [
+              "History and philosophical foundations of AI",
+              "Knowledge representation and reasoning",
+              "Search and optimization techniques"
+            ]
+          },
+          {
+            "moduleName": "Logical and Probabilistic Reasoning",
+            "subtopics": [
+              "Rule-based systems and expert systems",
+              "Bayesian networks and uncertainty management"
+            ]
+          },
+          {
+            "moduleName": "Applications of AI",
+            "subtopics": [
+              "Natural language processing",
+              "Robotics and computer vision",
+              "Case studies in real-world AI applications"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Cryptography and System Security",
+        "modules": [
+          {
+            "moduleName": "Cryptographic Algorithms",
+            "subtopics": [
+              "Symmetric and asymmetric encryption",
+              "Hash functions and digital signatures",
+              "Key exchange protocols"
+            ]
+          },
+          {
+            "moduleName": "Network and System Security",
+            "subtopics": [
+              "Firewalls, VPNs and intrusion detection systems",
+              "Secure communication protocols",
+              "Risk analysis and threat modeling"
+            ]
+          },
+          {
+            "moduleName": "Security Policies and Management",
+            "subtopics": [
+              "Security standards and compliance",
+              "Incident response and forensics",
+              "Ethical and legal aspects of cybersecurity"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Web Computing",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Web Technologies",
+            "subtopics": [
+              "Client-server architecture and HTTP/HTTPS protocols",
+              "HTML, CSS, and JavaScript",
+              "Responsive design and web standards"
+            ]
+          },
+          {
+            "moduleName": "Web Application Development",
+            "subtopics": [
+              "Front-end frameworks and libraries",
+              "Server-side scripting and RESTful APIs",
+              "Database integration and session management"
+            ]
+          },
+          {
+            "moduleName": "Deployment and Security in Web Applications",
+            "subtopics": [
+              "Web application firewalls and encryption",
+              "Scalability, load balancing, and cloud platforms"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Software Engineering and Project Management",
+        "modules": [
+          {
+            "moduleName": "Software Development Life Cycle (SDLC)",
+            "subtopics": [
+              "Requirement analysis and design methodologies",
+              "Implementation, testing, and maintenance",
+              "Agile and waterfall models"
+            ]
+          },
+          {
+            "moduleName": "Software Design and Architecture",
+            "subtopics": [
+              "Design patterns and architectural styles",
+              "Modular design and system integration",
+              "Scalability and performance optimization"
+            ]
+          },
+          {
+            "moduleName": "Project Management",
+            "subtopics": [
+              "Planning, scheduling and risk management",
+              "Quality assurance and team collaboration",
+              "Cost and resource management"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Machine Learning",
+        "modules": [
+          {
+            "moduleName": "Supervised Learning",
+            "subtopics": [
+              "Regression and classification algorithms",
+              "Decision trees, SVMs and ensemble methods",
+              "Loss functions and model evaluation"
+            ]
+          },
+          {
+            "moduleName": "Unsupervised Learning",
+            "subtopics": [
+              "Clustering techniques and dimensionality reduction",
+              "Principal Component Analysis (PCA)",
+              "Anomaly detection"
+            ]
+          },
+          {
+            "moduleName": "Optimization and Model Selection",
+            "subtopics": [
+              "Gradient descent and its variants",
+              "Cross-validation and hyperparameter tuning",
+              "Regularization techniques"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Deep Learning",
+        "modules": [
+          {
+            "moduleName": "Neural Network Fundamentals",
+            "subtopics": [
+              "Perceptron model and activation functions",
+              "Backpropagation and training dynamics",
+              "Loss functions and optimization"
+            ]
+          },
+          {
+            "moduleName": "Convolutional Neural Networks",
+            "subtopics": [
+              "CNN architecture and convolution operation",
+              "Pooling, normalization, and dropout",
+              "Applications in image processing"
+            ]
+          },
+          {
+            "moduleName": "Recurrent Neural Networks and LSTM",
+            "subtopics": [
+              "Sequence modeling and RNN basics",
+              "Long Short-Term Memory networks",
+              "Applications in time series and text processing"
+            ]
+          },
+          {
+            "moduleName": "Advanced Topics in Deep Learning",
+            "subtopics": [
+              "Generative Adversarial Networks (GANs)",
+              "Transfer learning and fine tuning",
+              "State-of-the-art architectures"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Big Data Analytics",
+        "modules": [
+          {
+            "moduleName": "Big Data Ecosystem",
+            "subtopics": [
+              "Introduction to Hadoop and Spark",
+              "MapReduce programming model",
+              "Distributed file systems (HDFS)"
+            ]
+          },
+          {
+            "moduleName": "Data Storage and Processing",
+            "subtopics": [
+              "NoSQL databases and distributed storage",
+              "Real-time data processing frameworks",
+              "Scalability and data consistency"
+            ]
+          },
+          {
+            "moduleName": "Advanced Analytics on Big Data",
+            "subtopics": [
+              "Statistical analysis on massive datasets",
+              "Machine learning integration with big data",
+              "Visualization and reporting"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Analytics and Visualization",
+        "modules": [
+          {
+            "moduleName": "Data Cleaning and Preprocessing",
+            "subtopics": [
+              "Missing data handling and normalization",
+              "Feature extraction and transformation",
+              "Data integration and quality assessment"
+            ]
+          },
+          {
+            "moduleName": "Statistical Methods and Predictive Modeling",
+            "subtopics": [
+              "Exploratory data analysis",
+              "Regression, classification and clustering",
+              "Performance evaluation metrics"
+            ]
+          },
+          {
+            "moduleName": "Visualization Techniques",
+            "subtopics": [
+              "Charts, graphs and dashboards",
+              "Interactive visualization tools",
+              "Storytelling with data"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Advanced Artificial Intelligence",
+        "modules": [
+          {
+            "moduleName": "Advanced Machine Learning Techniques",
+            "subtopics": [
+              "Reinforcement learning and Markov Decision Processes",
+              "Ensemble methods and meta-learning",
+              "Advanced optimization algorithms"
+            ]
+          },
+          {
+            "moduleName": "Cognitive Computing and Neural Symbolic Integration",
+            "subtopics": [
+              "Hybrid models combining symbolic and sub-symbolic AI",
+              "Explainable AI (XAI)",
+              "Applications in decision-making systems"
+            ]
+          },
+          {
+            "moduleName": "Emerging Trends in AI",
+            "subtopics": [
+              "Natural language understanding and generation",
+              "Autonomous systems and robotics",
+              "Ethical, social and legal implications"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "branch": "AI & ML Engineering",
+    "subjects": [
+      {
+        "subjectName": "Applied Mathematics-III",
+        "modules": [
+          {
+            "moduleName": "Complex Variables and Matrix Theory",
+            "subtopics": [
+              "Complex numbers: algebra, polar and exponential forms",
+              "Matrix operations and determinants",
+              "Eigenvalues, eigenvectors, and applications in system solutions"
+            ]
+          },
+          {
+            "moduleName": "Fourier and Laplace Transforms",
+            "subtopics": [
+              "Fourier series and transformation techniques",
+              "Laplace transform and its inverse",
+              "Applications to differential equations and signal processing"
+            ]
+          },
+          {
+            "moduleName": "Probability, Statistics and Numerical Methods",
+            "subtopics": [
+              "Probability distributions and sampling theory",
+              "Statistical inference and hypothesis testing",
+              "Numerical integration, interpolation and approximation methods"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Applied Mathematics-IV",
+        "modules": [
+          {
+            "moduleName": "Advanced Differential Equations and Transforms",
+            "subtopics": [
+              "Higher order differential equations",
+              "Laplace and Fourier methods for solving complex DEs",
+              "Boundary value problems and stability analysis"
+            ]
+          },
+          {
+            "moduleName": "Complex Analysis and Contour Integration",
+            "subtopics": [
+              "Analytic functions and Cauchy\u2019s theorem",
+              "Contour integration and the residue theorem",
+              "Applications in evaluating real integrals"
+            ]
+          },
+          {
+            "moduleName": "Optimization and Approximation Techniques",
+            "subtopics": [
+              "Iterative methods for nonlinear equations",
+              "Error analysis and convergence criteria",
+              "Least-squares methods and polynomial approximations"
+            ]
+          },
+          {
+            "moduleName": "Random Processes and Advanced Probability",
+            "subtopics": [
+              "Stochastic processes",
+              "Markov chains and renewal theory",
+              "Applications in modeling and simulation"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Operating System",
+        "modules": [
+          {
+            "moduleName": "Process and Thread Management",
+            "subtopics": [
+              "Process scheduling algorithms and context switching",
+              "Multithreading and concurrency models",
+              "Interprocess communication methods"
+            ]
+          },
+          {
+            "moduleName": "Memory Management and Virtualization",
+            "subtopics": [
+              "Paging, segmentation, and virtual memory concepts",
+              "Memory allocation, protection, and caching techniques",
+              "Virtualization and containerization"
+            ]
+          },
+          {
+            "moduleName": "File Systems and I/O Management",
+            "subtopics": [
+              "File organization and storage structures",
+              "Disk scheduling algorithms and RAID configurations",
+              "Device management and I/O buffering"
+            ]
+          },
+          {
+            "moduleName": "Synchronization, Deadlock and Resource Management",
+            "subtopics": [
+              "Synchronization primitives: semaphores, mutexes, monitors",
+              "Deadlock detection, prevention and recovery",
+              "Resource allocation and performance issues"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Warehouse & Mining",
+        "modules": [
+          {
+            "moduleName": "Data Warehousing Architecture",
+            "subtopics": [
+              "Concepts of OLAP and OLTP",
+              "Warehouse design, schema modeling and ETL processes",
+              "Multidimensional modeling"
+            ]
+          },
+          {
+            "moduleName": "Data Mining Techniques",
+            "subtopics": [
+              "Classification, clustering, and regression techniques",
+              "Association rule mining and pattern discovery",
+              "Data preprocessing and feature extraction"
+            ]
+          },
+          {
+            "moduleName": "Business Intelligence & Visualization",
+            "subtopics": [
+              "Data reporting and dashboard design",
+              "Visualization techniques and tools",
+              "Case studies in business analytics"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Analysis of Algorithm",
+        "modules": [
+          {
+            "moduleName": "Algorithm Design Techniques",
+            "subtopics": [
+              "Divide and conquer, greedy and dynamic programming",
+              "Backtracking and branch-and-bound strategies",
+              "Randomized algorithms"
+            ]
+          },
+          {
+            "moduleName": "Complexity Analysis",
+            "subtopics": [
+              "Time and space complexity, Big-O and Theta notations",
+              "Average-case, worst-case and amortized analysis"
+            ]
+          },
+          {
+            "moduleName": "Advanced Topics in Algorithms",
+            "subtopics": [
+              "Graph algorithms and network flow",
+              "NP-completeness and approximation algorithms",
+              "Heuristic and metaheuristic approaches"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Structures",
+        "modules": [
+          {
+            "moduleName": "Fundamental Data Structures",
+            "subtopics": [
+              "Arrays, linked lists, stacks and queues",
+              "Trees, heaps and graphs",
+              "Hash tables and dictionaries"
+            ]
+          },
+          {
+            "moduleName": "Algorithms on Data Structures",
+            "subtopics": [
+              "Traversal, insertion, deletion, and searching techniques",
+              "Sorting algorithms using various data structures",
+              "Recursive data processing"
+            ]
+          },
+          {
+            "moduleName": "Advanced Data Structures",
+            "subtopics": [
+              "Balanced trees (AVL, Red-Black Trees)",
+              "B-trees, tries and other decision tree structures",
+              "Applications in database indexing and network routing"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Digital Logic and Computer Architecture",
+        "modules": [
+          {
+            "moduleName": "Digital Logic Fundamentals",
+            "subtopics": [
+              "Boolean algebra, logic gates and truth tables",
+              "Combinational circuit design and circuit minimization",
+              "Sequential circuits: latches, flip-flops, and counters"
+            ]
+          },
+          {
+            "moduleName": "Computer Architecture",
+            "subtopics": [
+              "Processor design and instruction set architectures",
+              "Pipelining, caching, and memory hierarchies",
+              "RISC vs. CISC design principles"
+            ]
+          },
+          {
+            "moduleName": "Microarchitecture and I/O Systems",
+            "subtopics": [
+              "Internal processor organization and buses",
+              "Peripheral interfacing and system integration",
+              "Performance metrics and case studies"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Database Management System",
+        "modules": [
+          {
+            "moduleName": "Relational Database Concepts",
+            "subtopics": [
+              "Entity-relationship modeling and schema design",
+              "Normalization and SQL query processing",
+              "Transactions and data integrity"
+            ]
+          },
+          {
+            "moduleName": "Transaction and Concurrency Control",
+            "subtopics": [
+              "ACID properties and isolation levels",
+              "Locking protocols and recovery techniques"
+            ]
+          },
+          {
+            "moduleName": "Advanced and Distributed Databases",
+            "subtopics": [
+              "NoSQL databases and Big Data integration",
+              "Data warehousing and distributed query processing",
+              "Emerging trends in database technology"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Microprocessor",
+        "modules": [
+          {
+            "moduleName": "Microprocessor Architecture",
+            "subtopics": [
+              "Internal organization and instruction sets",
+              "Registers, buses and control signals",
+              "Operating modes and performance considerations"
+            ]
+          },
+          {
+            "moduleName": "Assembly Language Programming",
+            "subtopics": [
+              "Basic assembly syntax and addressing modes",
+              "Control structures and loop constructs",
+              "I/O interfacing and low-level programming techniques"
+            ]
+          },
+          {
+            "moduleName": "Peripheral Interfacing and Embedded Systems",
+            "subtopics": [
+              "Techniques for external device interfacing",
+              "Timers, counters and communication protocols",
+              "Case studies in embedded system design"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Discrete Structure and Graph Theory",
+        "modules": [
+          {
+            "moduleName": "Foundations of Discrete Mathematics",
+            "subtopics": [
+              "Sets, relations and functions",
+              "Propositional and predicate logic",
+              "Proof techniques and mathematical induction"
+            ]
+          },
+          {
+            "moduleName": "Combinatorics and Probability",
+            "subtopics": [
+              "Counting principles, permutations and combinations",
+              "Recurrence relations and the binomial theorem",
+              "Fundamentals of probability theory"
+            ]
+          },
+          {
+            "moduleName": "Graph Theory",
+            "subtopics": [
+              "Graph terminology and representations",
+              "Trees, connectivity, and graph traversal algorithms (BFS, DFS)",
+              "Applications to network and scheduling problems"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Computer Graphics",
+        "modules": [
+          {
+            "moduleName": "2D Graphics and Transformations",
+            "subtopics": [
+              "Graphics primitives, color models and coordinate systems",
+              "2D transformations, clipping and rasterization",
+              "Basic algorithms for rendering"
+            ]
+          },
+          {
+            "moduleName": "3D Graphics and Rendering",
+            "subtopics": [
+              "3D transformations and projection techniques",
+              "Lighting models, shading and texture mapping",
+              "Rendering pipelines and acceleration techniques"
+            ]
+          },
+          {
+            "moduleName": "Animation and Visualization",
+            "subtopics": [
+              "Principles of animation",
+              "Techniques for interactive visualization",
+              "Introduction to virtual and augmented reality"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Artificial Intelligence",
+        "modules": [
+          {
+            "moduleName": "Foundations of AI",
+            "subtopics": [
+              "History, philosophy and definitions of AI",
+              "Knowledge representation and search strategies",
+              "Logic-based reasoning systems"
+            ]
+          },
+          {
+            "moduleName": "Probabilistic and Uncertainty Reasoning",
+            "subtopics": [
+              "Bayesian networks and inference",
+              "Decision theory and risk analysis",
+              "Fuzzy logic and approximate reasoning"
+            ]
+          },
+          {
+            "moduleName": "AI Applications and Case Studies",
+            "subtopics": [
+              "Natural language processing and computer vision",
+              "Robotics and intelligent systems",
+              "Emerging trends in applied AI"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Cryptography and System Security",
+        "modules": [
+          {
+            "moduleName": "Cryptographic Primitives and Protocols",
+            "subtopics": [
+              "Symmetric and asymmetric encryption algorithms",
+              "Block ciphers, stream ciphers and hash functions",
+              "Digital signatures and key exchange protocols"
+            ]
+          },
+          {
+            "moduleName": "Network and System Security Fundamentals",
+            "subtopics": [
+              "Security architectures and risk assessment",
+              "Firewalls, intrusion detection and prevention",
+              "Secure communication protocols (SSL/TLS)"
+            ]
+          },
+          {
+            "moduleName": "Security Policies, Forensics and Compliance",
+            "subtopics": [
+              "Security policies and ethical hacking",
+              "Digital forensics and incident response",
+              "Cyber law and standards compliance"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Web Computing",
+        "modules": [
+          {
+            "moduleName": "Fundamentals of Web Technologies",
+            "subtopics": [
+              "Client-server architecture, HTTP/HTTPS protocols",
+              "HTML, CSS and JavaScript basics",
+              "Responsive design principles"
+            ]
+          },
+          {
+            "moduleName": "Web Application Development",
+            "subtopics": [
+              "Front-end frameworks and libraries",
+              "Server-side scripting and RESTful API design",
+              "Database integration for dynamic content"
+            ]
+          },
+          {
+            "moduleName": "Deployment and Web Security",
+            "subtopics": [
+              "Web server configuration and cloud deployment",
+              "Security practices in web applications",
+              "Performance optimization and scalability"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Software Engineering and Project Management",
+        "modules": [
+          {
+            "moduleName": "Software Development Life Cycle (SDLC)",
+            "subtopics": [
+              "Requirement analysis, design and implementation",
+              "Testing, deployment, and maintenance",
+              "Agile, iterative and waterfall models"
+            ]
+          },
+          {
+            "moduleName": "Software Design and Architecture",
+            "subtopics": [
+              "Design patterns and architectural frameworks",
+              "Modularity, scalability and reuse",
+              "Case studies in system design"
+            ]
+          },
+          {
+            "moduleName": "Project Management Essentials",
+            "subtopics": [
+              "Planning, scheduling and resource management",
+              "Risk management and quality assurance",
+              "Team collaboration and leadership"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Machine Learning",
+        "modules": [
+          {
+            "moduleName": "Supervised Learning Techniques",
+            "subtopics": [
+              "Regression and classification algorithms",
+              "Decision trees, support vector machines and ensemble methods",
+              "Evaluation and validation techniques"
+            ]
+          },
+          {
+            "moduleName": "Unsupervised Learning Approaches",
+            "subtopics": [
+              "Clustering algorithms and dimensionality reduction",
+              "Principal Component Analysis (PCA) and anomaly detection",
+              "Applications to data segmentation"
+            ]
+          },
+          {
+            "moduleName": "Optimization and Model Selection",
+            "subtopics": [
+              "Gradient descent and advanced optimization strategies",
+              "Hyperparameter tuning and regularization",
+              "Cross-validation and performance metrics"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Deep Learning",
+        "modules": [
+          {
+            "moduleName": "Neural Network Fundamentals",
+            "subtopics": [
+              "Perceptron, activation functions and backpropagation",
+              "Loss functions and optimization in deep networks"
+            ]
+          },
+          {
+            "moduleName": "Convolutional and Recurrent Neural Networks",
+            "subtopics": [
+              "CNN architecture for image processing",
+              "RNNs and LSTM for sequence modeling",
+              "Practical applications and case studies"
+            ]
+          },
+          {
+            "moduleName": "Advanced Deep Learning Concepts",
+            "subtopics": [
+              "Generative models such as GANs",
+              "Transfer learning and fine-tuning",
+              "State-of-the-art architectures and trends"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Big Data Analytics",
+        "modules": [
+          {
+            "moduleName": "Big Data Ecosystem and Infrastructure",
+            "subtopics": [
+              "Overview of Hadoop, Spark and distributed computing",
+              "MapReduce programming model and HDFS concepts"
+            ]
+          },
+          {
+            "moduleName": "Data Storage and Real-Time Processing",
+            "subtopics": [
+              "NoSQL databases and distributed storage techniques",
+              "Real-time analytics frameworks and stream processing"
+            ]
+          },
+          {
+            "moduleName": "Advanced Analytical Techniques",
+            "subtopics": [
+              "Statistical analysis on massive datasets",
+              "Integration of machine learning with Big Data",
+              "Data visualization and reporting"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Data Analytics and Visualization",
+        "modules": [
+          {
+            "moduleName": "Data Preprocessing and Cleaning",
+            "subtopics": [
+              "Handling missing values and outliers",
+              "Normalization and feature extraction",
+              "Data integration and transformation"
+            ]
+          },
+          {
+            "moduleName": "Statistical Analysis and Predictive Modeling",
+            "subtopics": [
+              "Regression, classification and clustering methods",
+              "Model evaluation and performance metrics",
+              "Time series analysis and forecasting"
+            ]
+          },
+          {
+            "moduleName": "Visualization Techniques and Tools",
+            "subtopics": [
+              "Charting, dashboards and interactive visualizations",
+              "Use of libraries and software (e.g., Matplotlib, Tableau)",
+              "Principles of effective data visualization"
+            ]
+          }
+        ]
+      },
+      {
+        "subjectName": "Advanced Artificial Intelligence",
+        "modules": [
+          {
+            "moduleName": "Advanced Machine Learning Techniques",
+            "subtopics": [
+              "Ensemble methods and meta-learning",
+              "Reinforcement learning and Markov Decision Processes",
+              "Advanced optimization and regularization"
+            ]
+          },
+          {
+            "moduleName": "Neural-Symbolic Integration and Cognitive Computing",
+            "subtopics": [
+              "Hybrid models combining symbolic and sub-symbolic approaches",
+              "Explainable AI (XAI)",
+              "Applications in decision support systems"
+            ]
+          },
+          {
+            "moduleName": "Emerging Trends in AI",
+            "subtopics": [
+              "Advances in natural language processing and computer vision",
+              "Autonomous systems and robotics",
+              "Ethical and societal impacts of advanced AI"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,178 @@
+.lecture-container {
+    padding: 2rem;
+    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+                radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+                radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+                radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+                radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+                #0f172a;
+    background-size: 250% 250%;
+    animation: gradientShift 30s ease infinite;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #fff;
+  }
+  
+  .lecture-breadcrumb {
+    font-size: 1rem;
+    color: #cbd5e1;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .lecture-main {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: #1e293b;
+    border-radius: 1rem;
+    overflow: hidden;
+    border: 2px solid #10b981;
+    flex-wrap: wrap; /* 🔥 Important for mobile */
+  }
+  
+  .lecture-sidebar {
+    width: 300px;
+    background: #1e293b;
+    padding: 1rem;
+    overflow-y: auto;
+    height: 80vh;
+    color: #1e293b;
+    flex-shrink: 0;
+  }
+  
+  .lecture-module {
+    margin-bottom: 1.5rem;
+  }
+  
+  .lecture-module-title {
+    font-weight: bold;
+    color: #10b981;
+    margin-bottom: 0.75rem;
+  }
+  
+  .lecture-subtopics {
+    padding-left: 0.5rem;
+  }
+  
+  .lecture-subtopic {
+    padding: 0.4rem 0;
+    cursor: pointer;
+    font-size: 0.95rem;
+    color: #fff;
+    transition: color 0.2s;
+  }
+  
+  .lecture-subtopic:hover {
+    color: #10b981;
+  }
+  
+  .lecture-subtopic.active {
+    font-weight: normal;
+    color: #10b981;
+  }
+  
+  .lecture-content {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1e293b;
+  }
+  
+  .lecture-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #10b981;
+  }
+  
+  .lecture-video-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    background: #0f172a;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .lecture-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Animation for background */
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  /* ================= RESPONSIVENESS ================= */
+  @media (max-width: 900px) {
+    .lecture-main {
+      flex-direction: column;
+    }
+  
+    .lecture-sidebar {
+      width: 100%;
+      height: auto;
+      max-height: 300px;
+      overflow-y: scroll;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #10b981;
+    }
+  
+    .lecture-content {
+      padding: 1rem;
+    }
+  
+    .lecture-video-wrapper {
+      padding-top: 56.25%;
+    }
+  
+    .lecture-title {
+      font-size: 1.25rem;
+    }
+  }
+  
+
+  /* Width of the scrollbar */
+.lecture-sidebar::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  /* Background of scrollbar track */
+  .lecture-sidebar::-webkit-scrollbar-track {
+    background: #e2e8f0; /* light gray */
+    border-radius: 8px;
+  }
+  
+  /* Color of the scrollbar thumb */
+  .lecture-sidebar::-webkit-scrollbar-thumb {
+    background: #10b981; /* green */
+    border-radius: 8px;
+  }
+  
+  /* Hover effect on scrollbar thumb */
+  .lecture-sidebar::-webkit-scrollbar-thumb:hover {
+    background: #059669; /* darker green on hover */
+  }
+
+  /* Firefox */
+.lecture-sidebar {
+    scrollbar-width: thin;
+    scrollbar-color: #10b981 #0f172a; /* thumb color, track color */
+  }
+  

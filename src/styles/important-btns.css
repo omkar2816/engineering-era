@@ -1,0 +1,76 @@
+/* buttons.css */
+
+.button-background {
+    /* min-height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background: linear-gradient(-90deg, #0f172a, #1e293b, #059669); */
+    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+              radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+              radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+              radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+              radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+              #0f172a;
+    background-size: 250% 250%;
+    animation: gradientShift 30s ease infinite;
+    padding: 2rem 0rem;
+    overflow-x: hidden;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 0%;
+    }
+    50% {
+      background-position: 100% 100%;
+    }
+    100% {
+      background-position: 0% 0%;
+    }
+  }
+  
+  .button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 900px;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .course-button {
+    background-color: #1e293b;
+    color: #ffffff;
+    border: 2px solid #10b981;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    width: 270px;
+    text-align: center;
+  }
+  
+  .course-button:hover {
+    background-color: #059669;
+    color: #0f172a;
+    transform: scale(1.05);
+    border: none;
+    /* border-color: white; */
+    /* box-shadow: 0 8px 16px rgba(16, 185, 129, 0.4); */
+  }
+  
+  @media (max-width: 600px) {
+    .course-button {
+      width: 100%;
+    }
+  }
+  
+  .button-background {
+    box-sizing: border-box;
+    overflow-x: hidden;
+  }
