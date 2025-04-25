@@ -19,6 +19,7 @@ import ContactUs from "./pages/contactUs";
 import SubjectModules from "./pages/subjectModules";
 import Lecture from "./pages/lectures";
 import Reviews from "./pages/reviews";
+import EngineeringMath from "./pages/engineeringMath";
 
 // Modal
 import AuthModal from "./pages/loginRegister";
@@ -57,6 +58,7 @@ function App() {
           <Route path="/subject-modules" element={<><SubjectModules /> <Footer /></>} />
           <Route path="/lecture" element={<><Lecture /> <Footer /></>} />
           <Route path="/reviews" element={<><Reviews /> <Footer /></>} />
+          <Route path="/engineering-math" element={<><EngineeringMath /> <Footer /></>} />
 
         </Routes>
       </div>

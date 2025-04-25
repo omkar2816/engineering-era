@@ -117,25 +117,9 @@ export default function Navbar({ onLoginClick }) {
               <Link to="/mu-importants?branch=First%20Year%20Engineering" className="dropdown-item">
                 First Year
               </Link>
-              <div className="dropdown-submenu">
-                <div className="dropdown-item">Engineering Mathematics ▸</div>
-                <div className="dropdown-submenu-items">
-                  {[
-                    "Engineering Mathematics-I",
-                    "Engineering Mathematics-II",
-                    "Engineering Mathematics-III",
-                    "Engineering Mathematics-IV",
-                  ].map((math) => (
-                    <Link
-                      key={math}
-                      to={`/subject-modules?branch=Computer%20Engineering&subject=${encodeURIComponent(math)}`}
-                      className="dropdown-item"
-                    >
-                      {math}
-                    </Link>
-                  ))}
-                </div>
-              </div>
+              <Link to="/engineering-math" className="dropdown-item">
+                Engineering Mathematics
+              </Link>
               <Link to="/viva-questions" className="dropdown-item">
                 Viva Questions
               </Link>

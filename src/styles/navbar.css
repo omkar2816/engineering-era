@@ -115,31 +115,7 @@
     background-color: #334155;
     color:#34d399;
   }
-
-  /* Nested submenu container */
-.dropdown-submenu {
-  position: relative;
-}
-
-/* Submenu dropdown */
-.dropdown-submenu-items {
-  display: none;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  background-color: #1e293b;
-  padding: 0.5rem 0;
-  border: 1px solid #10b981;
-  border-radius: 0.5rem;
-  z-index: 1000;
-  white-space: nowrap;
-}
-
-/* Show submenu on hover */
-.dropdown-submenu:hover .dropdown-submenu-items {
-  display: block;
-}
-
+  
   
   .login-btn {
     background-color: #10b981;

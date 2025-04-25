@@ -1,0 +1,99 @@
+.engineering-math-container {
+  /* min-height: 100vh; */
+  background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+              radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+              radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+              radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+              radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+              #0f172a;
+  background-size: 250% 250%;
+  animation: gradientShift 30s ease infinite;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.engineering-math-title {
+  color: #cbd5e1;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.engineering-math-title:hover {
+  color: #10b981;
+}
+
+.engineering-math-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  max-width: 900px;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.math-card {
+  background: #1e293b;
+  border: 2px solid #10b981;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  height: 80px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.math-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.math-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.math-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  transition: color 0.3s ease;
+}
+
+.math-arrow {
+  font-size: 1.2rem;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.math-card:hover .math-footer {
+  color: #10b981;
+}
+
+.math-card:hover .math-arrow {
+  color: #10b981;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@media (max-width: 768px) {
+  .engineering-math-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
