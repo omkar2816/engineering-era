@@ -90,6 +90,7 @@
     justify-content: space-between;
     min-height: 80px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 1rem;
   }
   
   .viva-card:hover {

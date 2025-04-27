@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/vivaQuestions.css";
 import Footer from "../components/footer";
+import syllabusData from "../data/engineering_syllabus.json"; // <-- Import syllabus JSON
 
 const branches = [
   "First Year Engineering",
@@ -11,16 +12,20 @@ const branches = [
   "AI & ML Engineering",
 ];
 
-const vivaSubjects = {
-  "First Year Engineering": ["Basic Electrical Engineering", "Engineering Mechanics"],
-  "Computer Engineering": ["Data Structures", "Computer Graphics", "Operating System"],
-  "Information Technology": ["Database Management System", "Software Engineering"],
-  "AI & DS Engineering": ["Artificial Intelligence", "Machine Learning"],
-  "AI & ML Engineering": ["Big Data Analytics", "Deep Learning"],
-};
-
 export default function VivaQuestionsGrid() {
   const [selectedBranch, setSelectedBranch] = useState("Computer Engineering");
+  const [subjects, setSubjects] = useState([]);
+
+  useEffect(() => {
+    // Find subjects dynamically from the syllabusData
+    const branchInfo = syllabusData.find(b => b.branch === selectedBranch);
+    if (branchInfo) {
+      const subjectNames = branchInfo.subjects.map(subject => subject.subjectName);
+      setSubjects(subjectNames);
+    } else {
+      setSubjects([]);
+    }
+  }, [selectedBranch]);
 
   return (
     <div className="viva-container">
@@ -42,7 +47,7 @@ export default function VivaQuestionsGrid() {
 
         {/* Right Viva Subjects */}
         <div className="viva-grid">
-          {(vivaSubjects[selectedBranch] || []).map((subject, index) => (
+          {subjects.map((subject, index) => (
             <motion.div
               key={index}
               whileHover={{ scale: 1.05 }}
