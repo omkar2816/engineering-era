@@ -104,12 +104,30 @@
   box-shadow: 0 6px 12px rgba(16, 185, 129, 0.2);
 }
 
-.about-avatar {
+/* .about-avatar {
   width: 200px;
   height: 200px;
   border-radius: 50%;
   background: linear-gradient(135deg, #10b981, #22d3ee);
   margin: 1rem auto 1rem auto;
+} */
+
+.about-avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #10b981, #22d3ee); /* fallback background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin: 1rem auto 1rem auto;
+}
+
+.about-avatar-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about-name {
