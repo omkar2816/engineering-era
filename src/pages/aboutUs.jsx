@@ -3,32 +3,36 @@ import { motion } from "framer-motion";
 import "../styles/aboutUs.css";
 import Footer from "../components/footer";
 import SocialHandles from "../components/socialHandles";
-import { desc } from "framer-motion/client";
+// import { desc } from "framer-motion/client";
+import omkarPic from "../assets/Omkar.png"
+import chetanPic from "../assets/Chetan.png"
+import rohanPic from "../assets/Rohan.png"
+import harshadPic from "../assets/Harshad.png"
 
 const teamMembers = [
   { 
     name: "Omkar Korgaonkar", 
     role: "Full Stack Developer, Founder, CTO", 
     description: "A Visionary leader with a passion for technology and education. He has a strong background in full-stack development and is dedicated to creating innovative solutions that enhance the learning experience.",
-    avatar: "https://your-link.com/omkar-avatar.jpg" // <<-- Add this
+    avatar: omkarPic // <<-- Add this
   },
   { 
     name: "Chetan Nanda", 
     role: "Full Stack Developer, Co-Founder, CFO", 
     description: "A skilled full-stack developer with a keen eye for detail. He is committed to building user-friendly applications that make learning more accessible and engaging.",
-    avatar: "https://your-link.com/chetan-avatar.jpg" // <<-- Add this
+    avatar: chetanPic // <<-- Add this
   },
   { 
     name: "Rohan Patil", 
     role: "Research Analyst, Content Management", 
     description: "An experienced content manager with a focus on educational materials. He is dedicated to ensuring that our content is accurate, relevant, and aligned with industry standards.",
-    avatar: "https://your-link.com/rohan-avatar.jpg" // <<-- Add this
+    avatar: rohanPic // <<-- Add this
   },
   { 
     name: "Harshad Kante", 
     role: "Research Analyst, Content Management", 
     description: "An expert in educational content extracter, he focuses on creating high-quality materials that bridge the gap between theory and practice.",
-    avatar: "https://your-link.com/harshad-avatar.jpg" // <<-- Add this
+    avatar: harshadPic // <<-- Add this
   },
 ];
 
