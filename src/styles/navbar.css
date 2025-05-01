@@ -140,3 +140,52 @@
     box-sizing: border-box;
     overflow-x: hidden;
   }
+
+  .profile-container {
+    position: relative;
+  }
+  
+  .profile-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 0.5rem;
+  }
+  
+  .profile-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid #10b981;
+  }
+  
+  .profile-name {
+    font-weight: 600;
+    color: #f1f5f9;
+  }
+  
+  .profile-dropdown {
+    position: fixed; /* or 'fixed' if you want it detached from navbar entirely */
+    top: 70px; /* below avatar */
+    right: 0;
+    background-color: #1e293b;
+    border: 1px solid #10b98133;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 0.75rem;
+    width: 130px;
+    z-index: 1000; /* ensure it floats over everything */
+    overflow: hidden;
+  }
+  
+  .profile-dropdown .dropdown-item {
+    padding: 0.75rem 1rem;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .profile-dropdown .dropdown-item:hover {
+    background-color: #334155;
+    color: #34d399;
+  }
+  

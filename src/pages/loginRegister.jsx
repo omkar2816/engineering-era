@@ -6,6 +6,7 @@ import { supabase } from "./supabaseClient";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [view, setView] = useState("login");
+  const [activeRole, setActiveRole] = useState("student");
 
   const [loginPasswordVisible, setLoginPasswordVisible] = useState(false);
   const [registerPasswordVisible, setRegisterPasswordVisible] = useState(false);
@@ -41,10 +42,24 @@ const AuthModal = ({ isOpen, onClose }) => {
     <div className="auth-overlay">
       <div className="auth-modal">
         <button className="close-btn" onClick={onClose}>×</button>
-
+        
         {view === "login" && (
           <div className="auth-content">
             <h2>Login with your Account</h2>
+            <div className="role-tabs">
+              <div
+                className={`role-tab ${activeRole === "student" ? "active" : ""}`}
+                onClick={() => setActiveRole("student")}
+              >
+                Student
+              </div>
+              <div
+                className={`role-tab ${activeRole === "instructor" ? "active" : ""}`}
+                onClick={() => setActiveRole("instructor")}
+              >
+                Instructor
+              </div>
+            </div>
             <input type="text" placeholder="Username or Email" />
             {renderPasswordField("Password", loginPasswordVisible, setLoginPasswordVisible)}
             <div className="row">
@@ -75,10 +90,27 @@ const AuthModal = ({ isOpen, onClose }) => {
         {view === "register" && (
           <div className="auth-content">
             <h2>Register a new Account</h2>
+            <div className="role-tabs">
+              <div
+                className={`role-tab ${activeRole === "student" ? "active" : ""}`}
+                onClick={() => setActiveRole("student")}
+              >
+                Student
+              </div>
+              <div
+                className={`role-tab ${activeRole === "instructor" ? "active" : ""}`}
+                onClick={() => setActiveRole("instructor")}
+              >
+                Instructor
+              </div>
+            </div>
             <input type="text" placeholder="Username" />
             <input type="email" placeholder="Email" />
             {renderPasswordField("Password", registerPasswordVisible, setRegisterPasswordVisible)}
             {renderPasswordField("Repeat Password", confirmPasswordVisible, setConfirmPasswordVisible)}
+            {activeRole === "instructor" && (
+              <input type="text" placeholder="Organization Name" />
+            )}
             <button className="yellow-btn">REGISTER</button>
             <div className="oauth-buttons">
               <button className="oauth-btn google-btn" onClick={() => handleOAuthLogin("google")}>

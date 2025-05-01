@@ -239,3 +239,27 @@
   border: none;
   /* border-color: #facc15; */
 }
+
+.role-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.role-tab {
+  padding: 0.4rem 1rem;
+  background-color: #0f172a;
+  border-radius: 8px;
+  border: 1px solid #334155;
+  cursor: pointer;
+  font-weight: 600;
+  color: #cbd5e1;
+  transition: all 0.3s ease;
+}
+
+.role-tab.active {
+  background-color: #10b981;
+  color: #fff;
+  border-color: #10b981;
+}
