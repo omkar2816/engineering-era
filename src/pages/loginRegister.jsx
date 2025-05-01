@@ -1,6 +1,8 @@
+
 import React, { useState } from "react";
 import "../styles/loginRegister.css";
 import { EyeOff, Eye } from "lucide-react";
+import { supabase } from "../supabaseClient";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [view, setView] = useState("login");
@@ -12,6 +14,11 @@ const AuthModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   const handleSwitch = (targetView) => setView(targetView);
+
+  const handleOAuthLogin = async (provider) => {
+    const { error } = await supabase.auth.signInWithOAuth({ provider });
+    if (error) console.error("OAuth login error:", error.message);
+  };
 
   const renderPasswordField = (placeholder, visible, setVisible) => (
     <div className="input-wrapper">
@@ -25,7 +32,7 @@ const AuthModal = ({ isOpen, onClose }) => {
         onClick={() => setVisible(!visible)}
         title={visible ? "Hide password" : "Show password"}
       >
-        {visible ? <EyeOff/> : <Eye/>}
+        {visible ? <EyeOff /> : <Eye />}
       </span>
     </div>
   );
@@ -42,18 +49,18 @@ const AuthModal = ({ isOpen, onClose }) => {
             {renderPasswordField("Password", loginPasswordVisible, setLoginPasswordVisible)}
             <div className="row">
               <label className="checkbox-label">
-                <input type="checkbox" className="checkbox"/>
+                <input type="checkbox" className="checkbox" />
                 Remember password
               </label>
               <span className="forgot">Forgot password?</span>
             </div>
             <button className="yellow-btn">LOGIN</button>
             <div className="oauth-buttons">
-              <button className="oauth-btn google-btn">
+              <button className="oauth-btn google-btn" onClick={() => handleOAuthLogin("google")}>
                 <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
                 Continue with Google
               </button>
-              <button className="oauth-btn github-btn">
+              <button className="oauth-btn github-btn" onClick={() => handleOAuthLogin("github")}>
                 <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub" />
                 Continue with GitHub
               </button>
@@ -71,18 +78,14 @@ const AuthModal = ({ isOpen, onClose }) => {
             <input type="text" placeholder="Username" />
             <input type="email" placeholder="Email" />
             {renderPasswordField("Password", registerPasswordVisible, setRegisterPasswordVisible)}
-            {renderPasswordField(
-              "Repeat Password",
-              confirmPasswordVisible,
-              setConfirmPasswordVisible
-            )}
+            {renderPasswordField("Repeat Password", confirmPasswordVisible, setConfirmPasswordVisible)}
             <button className="yellow-btn">REGISTER</button>
             <div className="oauth-buttons">
-              <button className="oauth-btn google-btn" onClick={() => alert("Google signup coming soon!")}>
+              <button className="oauth-btn google-btn" onClick={() => handleOAuthLogin("google")}>
                 <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
                 Sign up with Google
               </button>
-              <button className="oauth-btn github-btn" onClick={() => alert("GitHub signup coming soon!")}>
+              <button className="oauth-btn github-btn" onClick={() => handleOAuthLogin("github")}>
                 <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub" />
                 Sign up with GitHub
               </button>
