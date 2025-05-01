@@ -194,3 +194,48 @@
 .row .checkbox {
   width: 20px
 }
+
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.6rem;
+  border: 2px solid #334155;
+  border-radius: 10px;
+  background-color: #0f172a;
+  color: #f1f5f9;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.oauth-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.oauth-btn:hover {
+  transform: scale(1.03);
+  background-color: #1e293b;
+}
+
+.google-btn:hover {
+  background-color: #f1f5f9;
+  color: #1e293b;
+  border: none;
+  /* border-color: #10b981; */
+}
+
+.github-btn:hover {
+  background-color: #6e5494;
+  border: none;
+  /* border-color: #facc15; */
+}

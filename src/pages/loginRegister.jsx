@@ -48,6 +48,16 @@ const AuthModal = ({ isOpen, onClose }) => {
               <span className="forgot">Forgot password?</span>
             </div>
             <button className="yellow-btn">LOGIN</button>
+            <div className="oauth-buttons">
+              <button className="oauth-btn google-btn">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+                Continue with Google
+              </button>
+              <button className="oauth-btn github-btn">
+                <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub" />
+                Continue with GitHub
+              </button>
+            </div>
             <p className="switch">
               Don’t have Account?{" "}
               <span onClick={() => handleSwitch("register")}>Register Now</span>
@@ -67,6 +77,16 @@ const AuthModal = ({ isOpen, onClose }) => {
               setConfirmPasswordVisible
             )}
             <button className="yellow-btn">REGISTER</button>
+            <div className="oauth-buttons">
+              <button className="oauth-btn google-btn" onClick={() => alert("Google signup coming soon!")}>
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" />
+                Sign up with Google
+              </button>
+              <button className="oauth-btn github-btn" onClick={() => alert("GitHub signup coming soon!")}>
+                <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="GitHub" />
+                Sign up with GitHub
+              </button>
+            </div>
             <p className="switch">
               Already have an Account?{" "}
               <span onClick={() => handleSwitch("login")}>Login Now</span>
