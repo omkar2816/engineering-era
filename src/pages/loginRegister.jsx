@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import "../styles/loginRegister.css";
 import { EyeOff, Eye } from "lucide-react";
-import { supabase } from "../supabaseClient";
+import { supabase } from "./supabaseClient";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [view, setView] = useState("login");
