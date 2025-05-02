@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Plus, X, Save, Upload, Trash2 } from "lucide-react";
+import { Plus, X, Save, Trash2 } from "lucide-react";
+import { motion } from "framer-motion";
 import { supabase } from "../pages/supabaseClient";
 import "../styles/courseCreation.css";
 
@@ -8,106 +9,39 @@ const CourseCreation = ({ instructorName, instructorId, onCourseCreate, onCancel
   const [branch, setBranch] = useState("");
   const [price, setPrice] = useState("");
   const [modules, setModules] = useState([{ name: "", subtopics: [""] }]);
+  const [fileName, setFileName] = useState("");
   const [uploading, setUploading] = useState(false);
   const [fileUrl, setFileUrl] = useState("");
-  const [fileName, setFileName] = useState("");
 
   const branches = [
-    "First Year Engineering", 
-    "Computer Engineering", 
-    "Information Technology", 
-    "AI & DS Engineering", 
-    "AI & ML Engineering"
+    "First Year Engineering", "Computer Engineering",
+    "Information Technology", "AI & DS Engineering", "AI & ML Engineering"
   ];
 
-  // Add a new module
-  const addModule = () => {
-    setModules([...modules, { name: "", subtopics: [""] }]);
-  };
-
-  // Remove a module
-  const removeModule = (moduleIndex) => {
-    const updatedModules = modules.filter((_, index) => index !== moduleIndex);
-    setModules(updatedModules);
-  };
-
-  // Update module name
-  const updateModuleName = (moduleIndex, name) => {
-    const updatedModules = [...modules];
-    updatedModules[moduleIndex].name = name;
-    setModules(updatedModules);
-  };
-
-  // Add subtopic to a module
-  const addSubtopic = (moduleIndex) => {
-    const updatedModules = [...modules];
-    updatedModules[moduleIndex].subtopics.push("");
-    setModules(updatedModules);
-  };
-
-  // Remove subtopic from a module
-  const removeSubtopic = (moduleIndex, subtopicIndex) => {
-    const updatedModules = [...modules];
-    updatedModules[moduleIndex].subtopics = updatedModules[moduleIndex].subtopics.filter(
-      (_, index) => index !== subtopicIndex
-    );
-    setModules(updatedModules);
-  };
-
-  // Update subtopic text
-  const updateSubtopic = (moduleIndex, subtopicIndex, text) => {
-    const updatedModules = [...modules];
-    updatedModules[moduleIndex].subtopics[subtopicIndex] = text;
-    setModules(updatedModules);
-  };
-
-  // Handle file upload
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     if (!file) return;
 
     setUploading(true);
     setFileName(file.name);
+    const fileExt = file.name.split(".").pop();
+    const path = `course-content/${instructorId}/${Date.now()}.${fileExt}`;
+    const { error: uploadError } = await supabase.storage.from("course-files").upload(path, file);
 
-    try {
-      // Create a unique file path
-      const fileExt = file.name.split('.').pop();
-      const filePath = `course-content/${instructorId}/${Date.now()}.${fileExt}`;
-
-      // Upload file to Supabase storage
-      const { error: uploadError } = await supabase.storage
-        .from('course-files')
-        .upload(filePath, file);
-
-      if (uploadError) {
-        throw uploadError;
-      }
-
-      // Get public URL for the file
-      const { data } = supabase.storage
-        .from('course-files')
-        .getPublicUrl(filePath);
-
+    if (uploadError) {
+      alert("Upload failed.");
+      console.error(uploadError);
+    } else {
+      const { data } = supabase.storage.from("course-files").getPublicUrl(path);
       setFileUrl(data.publicUrl);
-    } catch (error) {
-      console.error("Error uploading file:", error.message);
-      alert("Error uploading file");
-    } finally {
-      setUploading(false);
     }
+
+    setUploading(false);
   };
 
-  // Form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!courseName || !branch || !price) {
-      alert("Please fill in all required fields");
-      return;
-    }
-
-    // Format modules data for storage
-    const courseData = {
+    const payload = {
       name: courseName,
       branch,
       price: parseFloat(price),
@@ -115,176 +49,133 @@ const CourseCreation = ({ instructorName, instructorId, onCourseCreate, onCancel
       instructor_id: instructorId,
       instructor_name: instructorName,
       content_url: fileUrl,
-      created_at: new Date()
+      created_at: new Date(),
     };
 
-    try {
-      // Insert course data into Supabase
-      const { data, error } = await supabase
-        .from('courses')
-        .insert([courseData])
-        .select();
-
-      if (error) throw error;
-
-      // Call the onCourseCreate callback with the new course data
-      onCourseCreate(data[0]);
-    } catch (error) {
-      console.error("Error creating course:", error.message);
+    const { data, error } = await supabase.from("courses").insert([payload]).select();
+    if (error) {
       alert("Failed to create course");
+      console.error(error);
+    } else {
+      onCourseCreate(data[0]);
     }
   };
 
   return (
-    <div className="course-creation-container">
-      <div className="course-creation-header">
-        <h2>Create New Course</h2>
-        <button className="close-btn" onClick={onCancel}>
-          <X size={20} />
-        </button>
+    <motion.div className="course-creation-container" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+      <div className="close-btn-container">
+        <button className="close-btn" onClick={onCancel}><X size={20} /></button>
       </div>
 
-      <form onSubmit={handleSubmit} className="course-form">
-        <div className="form-row">
-          <div className="form-group">
-            <label htmlFor="courseName">Course/Subject Name *</label>
-            <input
-              type="text"
-              id="courseName"
-              value={courseName}
-              onChange={(e) => setCourseName(e.target.value)}
-              placeholder="Enter course name"
-              required
-            />
-          </div>
+      <div className="header">
+        <h2>Create Course</h2>
+      </div>
 
+      <form className="course-form" onSubmit={handleSubmit}>
+        <div className="input-row">
           <div className="form-group">
-            <label htmlFor="branch">Department/Branch *</label>
-            <select
-              id="branch"
-              value={branch}
-              onChange={(e) => setBranch(e.target.value)}
-              required
-            >
-              <option value="">Select Department</option>
-              {branches.map((branchOption) => (
-                <option key={branchOption} value={branchOption}>
-                  {branchOption}
-                </option>
-              ))}
+            <label>Course Name</label>
+            <input value={courseName} onChange={(e) => setCourseName(e.target.value)} required />
+          </div>
+          <div className="form-group">
+            <label>Branch</label>
+            <select value={branch} onChange={(e) => setBranch(e.target.value)} required>
+              <option value="">Select</option>
+              {branches.map((b) => <option key={b}>{b}</option>)}
             </select>
           </div>
-        </div>
-
-        <div className="form-row">
           <div className="form-group">
-            <label htmlFor="price">Course Price (₹) *</label>
-            <input
-              type="number"
-              id="price"
-              value={price}
-              onChange={(e) => setPrice(e.target.value)}
-              placeholder="Enter price"
-              min="0"
-              required
-            />
+            <label>Price (₹)</label>
+            <input type="number" value={price} onChange={(e) => setPrice(e.target.value)} required />
           </div>
-
-          <div className="form-group">
-            <label htmlFor="courseContent">Course Content</label>
-            <div className="file-upload-container">
-              <input
-                type="file"
-                id="courseContent"
-                onChange={handleFileUpload}
-                className="file-input"
-              />
-              <div className="file-upload-btn">
-                <Upload size={16} />
-                <span>{uploading ? "Uploading..." : "Upload File"}</span>
-              </div>
-              {fileName && (
-                <div className="file-name">
-                  <span>{fileName}</span>
-                </div>
-              )}
+          <div className="form-group upload-group">
+            <label>Upload Content</label>
+            <div className="upload-area">
+              <input type="file" onChange={handleFileUpload} />
+              {uploading ? "Uploading..." : fileName || "Choose file"}
             </div>
           </div>
         </div>
 
-        <div className="modules-section">
-          <div className="section-header">
-            <h3>Course Modules</h3>
-            <button 
-              type="button" 
-              className="add-btn"
-              onClick={addModule}
-            >
-              <Plus size={16} /> Add Module
+        <div className="modules">
+          <div className="modules-header">
+            <h3>Modules</h3>
+            <button type="button" className="add-btn" onClick={() => setModules([...modules, { name: "", subtopics: [""] }])}>
+              <Plus size={14} /> Add Module
             </button>
           </div>
 
-          {modules.map((module, moduleIndex) => (
-            <div key={moduleIndex} className="module-container">
+          {modules.map((mod, i) => (
+            <div className="module-box" key={i}>
               <div className="module-header">
-                <div className="form-group module-name">
-                  <input
-                    type="text"
-                    value={module.name}
-                    onChange={(e) => updateModuleName(moduleIndex, e.target.value)}
-                    placeholder="Module Name"
-                  />
-                </div>
+                <input
+                  value={mod.name}
+                  placeholder="Module Name"
+                  onChange={(e) => {
+                    const newModules = [...modules];
+                    newModules[i].name = e.target.value;
+                    setModules(newModules);
+                  }}
+                />
                 <button
                   type="button"
                   className="remove-btn"
-                  onClick={() => removeModule(moduleIndex)}
+                  onClick={() => {
+                    const newModules = [...modules];
+                    newModules.splice(i, 1);
+                    setModules(newModules);
+                  }}
                 >
                   <Trash2 size={16} />
                 </button>
               </div>
 
-              <div className="subtopics-container">
-                <h4>Subtopics</h4>
-                {module.subtopics.map((subtopic, subtopicIndex) => (
-                  <div key={subtopicIndex} className="subtopic-row">
-                    <input
-                      type="text"
-                      value={subtopic}
-                      onChange={(e) => updateSubtopic(moduleIndex, subtopicIndex, e.target.value)}
-                      placeholder="Subtopic Name"
-                    />
-                    <button
-                      type="button"
-                      className="remove-btn"
-                      onClick={() => removeSubtopic(moduleIndex, subtopicIndex)}
-                    >
-                      <X size={16} />
-                    </button>
-                  </div>
-                ))}
-                <button
-                  type="button"
-                  className="add-small-btn"
-                  onClick={() => addSubtopic(moduleIndex)}
-                >
-                  <Plus size={14} /> Add Subtopic
-                </button>
-              </div>
+              {mod.subtopics.map((topic, j) => (
+                <div className="subtopic-row" key={j}>
+                  <input
+                    value={topic}
+                    placeholder="Subtopic"
+                    onChange={(e) => {
+                      const newModules = [...modules];
+                      newModules[i].subtopics[j] = e.target.value;
+                      setModules(newModules);
+                    }}
+                  />
+                  <button
+                    type="button"
+                    className="remove-btn"
+                    onClick={() => {
+                      const newModules = [...modules];
+                      newModules[i].subtopics.splice(j, 1);
+                      setModules(newModules);
+                    }}
+                  >
+                    <X size={14} />
+                  </button>
+                </div>
+              ))}
+
+              <button
+                type="button"
+                className="add-small-btn"
+                onClick={() => {
+                  const newModules = [...modules];
+                  newModules[i].subtopics.push("");
+                  setModules(newModules);
+                }}
+              >
+                <Plus size={14} /> Add Subtopic
+              </button>
             </div>
           ))}
         </div>
 
         <div className="form-actions">
-          <button type="button" className="cancel-btn" onClick={onCancel}>
-            Cancel
-          </button>
-          <button type="submit" className="save-btn">
-            <Save size={16} /> Save Course
-          </button>
+          <button type="button" className="cancel-btn" onClick={onCancel}>Cancel</button>
+          <button type="submit" className="save-btn"><Save size={16} /> Save</button>
         </div>
       </form>
-    </div>
+    </motion.div>
   );
 };
 
