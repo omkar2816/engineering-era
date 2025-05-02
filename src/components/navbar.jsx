@@ -1,7 +1,7 @@
 // src/components/navbar.jsx
 import React, { useState, useEffect } from "react";
 import { Home, Book, Users, Info, Phone, LogIn, UserCircle, Sun, Moon, LogOut } from "lucide-react";
-import { supabase } from "../pages/supabaseClient";
+import { supabase } from "../backend/supabaseClient";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom"; // ✅ Import Link
 import "../styles/navbar.css";

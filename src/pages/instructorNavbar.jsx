@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Sun, Moon, LogOut } from "lucide-react";
-import { supabase } from "../pages/supabaseClient";
+import { supabase } from "../backend/supabaseClient";
 import "../styles/instructorNavbar.css";
 
 const InstructorNavbar = ({ onLogout }) => {

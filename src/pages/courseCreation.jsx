@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Plus, X, Save, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
-import { supabase } from "../pages/supabaseClient";
+import { supabase } from "../backend/supabaseClient";
 import "../styles/courseCreation.css";
 
 const CourseCreation = ({ instructorName, instructorId, onCourseCreate, onCancel }) => {

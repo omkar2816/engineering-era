@@ -3,7 +3,7 @@ import { Plus, BookOpen } from "lucide-react";
 import InstructorNavbar from "./instructorNavbar";
 import CourseCreation from "./courseCreation";
 import Toast from "./notificationToast";
-import { supabase } from "../pages/supabaseClient";
+import { supabase } from "../backend/supabaseClient";
 import "../styles/instructorDashboard.css";
 
 const InstructorDashboard = () => {
