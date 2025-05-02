@@ -1,5 +1,5 @@
 // App.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/navbar";
@@ -26,18 +26,48 @@ import InstructorDashboard from "./pages/instructorDashboard";
 // Modal
 import AuthModal from "./pages/loginRegister";
 
+// Protected Route Component
+import ProtectedRoute from "./components/protectedRoute";
+
+// Supabase Client
+import { supabase } from "./backend/supabaseClient";
+
 function App() {
   const [isAuthModalOpen, setAuthModalOpen] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login state
+
+  // Check if the user is logged in when the app loads
+  useEffect(() => {
+    const checkUser = async () => {
+      const { data: { session } } = await supabase.auth.getSession();
+      if (session) {
+        setIsLoggedIn(true); // User is logged in
+      }
+    };
+    checkUser();
+  }, []);
 
   return (
     <Router>
       <div className="App">
+        {/* Navbar */}
         <Navbar onLoginClick={() => setAuthModalOpen(true)} />
+
+        {/* Login Modal */}
         {isAuthModalOpen && (
-          <AuthModal isOpen={isAuthModalOpen} onClose={() => setAuthModalOpen(false)} />
+          <AuthModal
+            isOpen={isAuthModalOpen}
+            onClose={() => setAuthModalOpen(false)}
+            onLoginSuccess={() => {
+              setIsLoggedIn(true); // Update login state on success
+              setAuthModalOpen(false); // Close the modal
+            }}
+          />
         )}
 
+        {/* Routes */}
         <Routes>
+          {/* Public Routes */}
           <Route
             path="/"
             element={
@@ -57,14 +87,28 @@ function App() {
           <Route path="/all-notes" element={<AllNotes />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<ContactUs />} />
-          <Route path="/subject-modules" element={<><SubjectModules /> <Footer /></>} />
-          <Route path="/lecture" element={<><Lecture /> <Footer /></>} />
-          <Route path="/reviews" element={<><Reviews /> <Footer /></>} />
-          <Route path="/engineering-math" element={<><EngineeringMath /> <Footer /></>} />  
-        </Routes>
 
-        <Routes>
-          {/* other routes */}
+          {/* Protected Routes */}
+          <Route
+            path="/subject-modules"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} setAuthModalOpen={setAuthModalOpen}>
+                <><SubjectModules /> <Footer /></>
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/lecture"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} setAuthModalOpen={setAuthModalOpen}>
+                <><Lecture /> <Footer /></>
+              </ProtectedRoute>
+            }
+          />
+
+          {/* Other Routes */}
+          <Route path="/reviews" element={<><Reviews /> <Footer /></>} />
+          <Route path="/engineering-math" element={<><EngineeringMath /> <Footer /></>} />
           <Route path="/instructor-dashboard" element={<InstructorDashboard />} />
         </Routes>
       </div>
