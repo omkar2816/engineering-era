@@ -63,12 +63,11 @@ const CourseCreation = ({ instructorName, instructorId, onCourseCreate, onCancel
 
   return (
     <motion.div className="course-creation-container" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className="close-btn-container">
-        <button className="close-btn" onClick={onCancel}><X size={20} /></button>
-      </div>
-
       <div className="header">
         <h2>Create Course</h2>
+        <span className="close-btn-container">
+            <button className="close-btn" onClick={onCancel}><X size={20} /></button>
+        </span>
       </div>
 
       <form className="course-form" onSubmit={handleSubmit}>
