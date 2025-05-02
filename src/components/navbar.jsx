@@ -129,7 +129,8 @@ export default function Navbar({ onLoginClick }) {
               <Link to="/instructor-dashboard" className="nav-item"><Home size={20} /> Home</Link>
               <Link to="/instructor-dashboard" className="nav-item"><Book size={20} /> My Courses</Link>
               <Link to="/instructor-doubts" className="nav-item"><Users size={20} /> Doubts</Link>
-              <Link to="/instructor-reviews" className="nav-item"><Info size={20} /> Student Reviews</Link>
+              <Link to="/about" className="nav-item"><Info size={20} /> About Us</Link>
+              <Link to="/contact" className="nav-item"><Phone size={20} /> Contact Us</Link>
             </>
           ) : (
             <>
