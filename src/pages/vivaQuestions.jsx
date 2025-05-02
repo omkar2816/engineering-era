@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import "../styles/vivaQuestions.css";
 import Footer from "../components/footer";
-import syllabusData from "../data/engineering_syllabus.json"; // <-- Import syllabus JSON
+import syllabusData from "../data/engineering_syllabus.json";
 
 const branches = [
   "First Year Engineering",
@@ -15,9 +15,9 @@ const branches = [
 export default function VivaQuestionsGrid() {
   const [selectedBranch, setSelectedBranch] = useState("Computer Engineering");
   const [subjects, setSubjects] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
-    // Find subjects dynamically from the syllabusData
     const branchInfo = syllabusData.find(b => b.branch === selectedBranch);
     if (branchInfo) {
       const subjectNames = branchInfo.subjects.map(subject => subject.subjectName);
@@ -26,6 +26,10 @@ export default function VivaQuestionsGrid() {
       setSubjects([]);
     }
   }, [selectedBranch]);
+
+  const filteredSubjects = subjects.filter(subject =>
+    subject.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="viva-container">
@@ -38,7 +42,10 @@ export default function VivaQuestionsGrid() {
               key={index}
               whileHover={{ scale: 1.02 }}
               className={`viva-branch-item ${selectedBranch === branch ? "active" : ""}`}
-              onClick={() => setSelectedBranch(branch)}
+              onClick={() => {
+                setSelectedBranch(branch);
+                setSearchTerm(""); // Reset search when branch changes
+              }}
             >
               {branch}
             </motion.div>
@@ -46,23 +53,41 @@ export default function VivaQuestionsGrid() {
         </div>
 
         {/* Right Viva Subjects */}
-        <div className="viva-grid">
-          {subjects.map((subject, index) => (
-            <motion.div
-              key={index}
-              whileHover={{ scale: 1.05 }}
-              className="viva-card"
-            >
-              <div className="viva-name">{subject}</div>
-              <div className="viva-footer">
-                <span>Viva Questions</span>
-                <span className="viva-arrow">&rarr;</span>
+        <div className="viva-subjects-wrapper">
+          {/* Search Bar */}
+          <div className="subject-search-bar-wrapper">
+            <input
+              type="text"
+              placeholder="Search subject..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="subject-search-input"
+            />
+          </div>
+
+          <div className="viva-grid">
+            {filteredSubjects.length > 0 ? (
+              filteredSubjects.map((subject, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.05 }}
+                  className="viva-card"
+                >
+                  <div className="viva-name">{subject}</div>
+                  <div className="viva-footer">
+                    <span>Viva Questions</span>
+                    <span className="viva-arrow">&rarr;</span>
+                  </div>
+                </motion.div>
+              ))
+            ) : (
+              <div style={{ color: "#cbd5e1", textAlign: "center", marginTop: "2rem" }}>
+                No subjects match your search.
               </div>
-            </motion.div>
-          ))}
+            )}
+          </div>
         </div>
       </div>
-      {/* Footer */}
       <Footer />
     </div>
   );
