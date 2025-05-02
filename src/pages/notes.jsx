@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../styles/notes.css";
 import Footer from "../components/footer";
@@ -14,6 +15,7 @@ const notes = [
 
 export default function NotesGrid() {
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   const filteredNotes = notes.filter((note) =>
     note.toLowerCase().includes(searchTerm.toLowerCase())
@@ -41,6 +43,9 @@ export default function NotesGrid() {
               key={index}
               whileHover={{ scale: 1.05 }}
               className="note-card"
+              onClick={() =>
+                navigate(`/pdf-viewer?branch=Computer%20Engineering&subject=${encodeURIComponent(note)}&moduleIndex=0&subtopicIndex=0`)
+              }
             >
               <div className="note-name">{note}</div>
               <div className="note-footer">

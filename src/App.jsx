@@ -20,6 +20,7 @@ import SubjectModules from "./pages/subjectModules";
 import Lecture from "./pages/lectures";
 import Reviews from "./pages/reviews";
 import EngineeringMath from "./pages/engineeringMath";
+import PdfViewer from "./pages/pdfViewer";
 
 import InstructorDashboard from "./pages/instructorDashboard";
 
@@ -110,6 +111,16 @@ function App() {
           <Route path="/reviews" element={<><Reviews /> <Footer /></>} />
           <Route path="/engineering-math" element={<><EngineeringMath /> <Footer /></>} />
           <Route path="/instructor-dashboard" element={<InstructorDashboard />} />
+
+          <Route
+            path="/pdf-viewer"
+            element={
+              <ProtectedRoute isLoggedIn={isLoggedIn} setAuthModalOpen={setAuthModalOpen}>
+                <><PdfViewer /> <Footer /></>
+              </ProtectedRoute>
+            }
+          />
+
         </Routes>
       </div>
     </Router>
