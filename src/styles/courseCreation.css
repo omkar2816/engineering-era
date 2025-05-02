@@ -2,6 +2,7 @@
     width: 100%;
     max-width: 1000px; /* Match My Courses container */
     margin: 2rem auto;
+    position: relative;
     padding: 2.5rem 3rem;
     background-color: #1e293b;
     border: 2px solid #10b981;
@@ -21,7 +22,9 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1.5rem;
+    width: 100%;
   }
+  
   
   .header h2 {
     font-size: 1.75rem;
@@ -31,23 +34,28 @@
   
   .close-btn-container {
     display: flex;
+    position: absolute;
     width: 50px;
     justify-content: flex-end;
     margin-bottom: -1rem;
   }
   
   .close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
     background: none;
     border: none;
     color: #6b7280;
     cursor: pointer;
     transition: color 0.2s ease, transform 0.2s ease;
+    z-index: 10;
   }
   
   .close-btn:hover {
     color: #ef4444;
     transform: scale(1.1);
-  }
+  }  
   
   .course-form .input-row {
     display: grid;
