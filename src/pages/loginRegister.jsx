@@ -2,15 +2,21 @@
 import React, { useState } from "react";
 import "../styles/loginRegister.css";
 import { EyeOff, Eye } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "./supabaseClient";
 
 const AuthModal = ({ isOpen, onClose }) => {
   const [view, setView] = useState("login");
   const [activeRole, setActiveRole] = useState("student");
+  const navigate = useNavigate();
 
   const [loginPasswordVisible, setLoginPasswordVisible] = useState(false);
   const [registerPasswordVisible, setRegisterPasswordVisible] = useState(false);
   const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
+
+  if (activeRole === "instructor") {
+    navigate("/instructor-dashboard");
+  }
 
   if (!isOpen) return null;
 
