@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "../styles/vivaQuestions.css";
 import Footer from "../components/footer";
@@ -16,6 +17,7 @@ export default function VivaQuestionsGrid() {
   const [selectedBranch, setSelectedBranch] = useState("Computer Engineering");
   const [subjects, setSubjects] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const branchInfo = syllabusData.find(b => b.branch === selectedBranch);
@@ -30,6 +32,12 @@ export default function VivaQuestionsGrid() {
   const filteredSubjects = subjects.filter(subject =>
     subject.toLowerCase().includes(searchTerm.toLowerCase())
   );
+
+  const handleSubjectClick = (subject) => {
+    navigate(
+      `/pdf-viewer?branch=${encodeURIComponent(selectedBranch)}&subject=${encodeURIComponent(subject)}&moduleIndex=0&subtopicIndex=0`
+    );
+  };
 
   return (
     <div className="viva-container">
@@ -72,6 +80,7 @@ export default function VivaQuestionsGrid() {
                   key={index}
                   whileHover={{ scale: 1.05 }}
                   className="viva-card"
+                  onClick={() => handleSubjectClick(subject)}
                 >
                   <div className="viva-name">{subject}</div>
                   <div className="viva-footer">
