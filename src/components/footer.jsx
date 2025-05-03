@@ -24,10 +24,10 @@ export default function Footer() {
     };
   
     emailjs.send(
-      "YOUR_SERVICE_ID",
-      "YOUR_TEMPLATE_ID",
+      "service_3fgplfr",
+      "template_kzkjied",
       templateParams,
-      "YOUR_PUBLIC_KEY"
+      "17YqskK4pV8d8kEAx"
     )
     .then((response) => {
       console.log("SUCCESS!", response.status, response.text);
