@@ -1,0 +1,38 @@
+{
+    "subjectName": "Engineering Mathematics-I",
+    "modules": [
+      {
+        "moduleName": "Complex Numbers, Matrices, and Determinants",
+        "videoFiles": [
+          "Power_of_Matrices.mp4"
+        ]
+      },
+      {
+        "moduleName": "Vector Algebra and Analytical Geometry",
+        "videoFiles": [
+          "Dot_Cross_Product.mp4",
+          "Vector_Clock.mp4",
+          "Vector_Equation.mp4"
+        ]
+      },
+      {
+        "moduleName": "Limits, Continuity, and Differentiability",
+        "videoFiles": [
+          "Continuity.mp4"
+        ]
+      },
+      {
+        "moduleName": "Differential Calculus and Applications",
+        "videoFiles": [
+          "Variation_Parameters.mp4",
+          "PARTIAL_DIFFERENTIAL_EQUATION.mp4",
+          "Euler's_theorem.mp4"
+        ]
+      },
+      {
+        "moduleName": "Integral Calculus",
+        "videoFiles": []
+      }
+    ]
+  }
+  
