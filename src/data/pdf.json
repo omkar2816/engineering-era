@@ -1,0 +1,102 @@
+{
+    "category": "Engineering Notes",
+    "subjects": [
+      {
+        "subjectName": "Engineering Mechanics",
+        "pdfFiles": ["Engineering-Mechanics.pdf"]
+      },
+      {
+        "subjectName": "Basic Electrical Engineering (BEE)",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Engineering Mathematics-I",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Engineering Mathematics-II",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Engineering Mathematics-III",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Engineering Mathematics-IV",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Data Structures",
+        "pdfFiles": ["Data-Structures.pdf"]
+      },
+      {
+        "subjectName": "Artificial Intelligence",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Operating System",
+        "pdfFiles": ["Operating-System.pdf"]
+      },
+      {
+        "subjectName": "Theoretical Computer Science",
+        "pdfFiles": ["Theoretical-Computer-Science.pdf", "tcs_notes.pdf"]
+      },
+      {
+        "subjectName": "Database Management System",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Software Engineering",
+        "pdfFiles": ["Software-Engineering.pdf"]
+      },
+      {
+        "subjectName": "Engineering Physics",
+        "pdfFiles": ["Engineering-Physics.pdf"]
+      },
+      {
+        "subjectName": "Engineering Chemistry",
+        "pdfFiles": ["Engineering-Chemistry.pdf"]
+      },
+      {
+        "subjectName": "Internet Programming",
+        "pdfFiles": ["Internet-Programming.pdf"]
+      },
+      {
+        "subjectName": "Microprocessor",
+        "pdfFiles": ["Microprocessor.pdf"]
+      },
+      {
+        "subjectName": "Big Data Analytics",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Computer Organization & Architecture",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Machine Learning",
+        "pdfFiles": ["Machine-Learning.pdf", "Deep_Learning.pdf"]
+      },
+      {
+        "subjectName": "SPCC Notes",
+        "pdfFiles": ["SPCC-Notes.pdf", "spcc_qp.pdf"]
+      },
+      {
+        "subjectName": "Discrete Structure & Graph Theory",
+        "pdfFiles": ["Discrete Structure and Graph Theory.pdf"]
+      },
+      {
+        "subjectName": "Data Warehouse & Mining",
+        "pdfFiles": ["Data-Warehouse-&-Mining.pdf"]
+      },
+      {
+        "subjectName": "Computer Network",
+        "pdfFiles": []
+      },
+      {
+        "subjectName": "Computer Graphics",
+        "pdfFiles": []
+      }
+    ]
+  }
+    
