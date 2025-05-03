@@ -1,146 +1,177 @@
 /* subjectModules.css */
 
 .module-container {
-    padding: 2rem;
-    background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
-                radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
-                radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
-                radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
-                radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
-                #0f172a;
-    background-size: 250% 250%;
-    animation: gradientShift 30s ease infinite;
-    /* min-height: 100vh; */
-    box-sizing: border-box;
-    color: #fff;
-  }
-  
-  .module-breadcrumb {
-    font-size: 1rem;
-    color: #cbd5e1;
-    margin-bottom: 2rem;
-    text-align: center;
-  }
-  
-  .module-wrapper {
-    max-width: 819.5px;
-    margin: 0 auto;
-  }  
+  padding: 2rem;
+  background: radial-gradient(circle at 15% 30%, #1e293b 10%, transparent 40%),
+              radial-gradient(circle at 85% 20%, #0f172a 20%, transparent 50%),
+              radial-gradient(circle at 50% 70%, #1e293b 25%, transparent 55%),
+              radial-gradient(circle at 75% 85%, #0f172a 15%, transparent 45%),
+              radial-gradient(circle at 40% 60%, #10b98122 10%, transparent 50%),
+              #0f172a;
+  background-size: 250% 250%;
+  animation: gradientShift 30s ease infinite;
+  /* min-height: 100vh; */
+  box-sizing: border-box;
+  color: #fff;
+}
 
-  .module-tabs {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0.02rem;
-  }
-  
-  .module-tab {
-    background: #1e293b;
-    padding: 0.75rem 2rem;
-    margin: 0 0.5rem;
-    flex: 1;
-    text-align: center;
-    border-radius: 0.75rem 0.75rem 0 0;
-    color: #cbd5e1;
-    font-weight: 600;
-    cursor: pointer;
-    border: 2px solid transparent;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .module-tab:hover {
-    background: #0f172a;
-    color: #10b981;
-    border-color: #cdcdcd;
-  }
+/* Enhanced Breadcrumb Navigation Styles */
+.breadcrumb-navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(30, 41, 59, 0.7);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-  .module-tab.active {
-    border-color: #10b981;
-    background: #0f172a;
-    color: #10b981;
-  }
-  
-  .module-table {
-    background: #1b2636;
-    border-radius: 0 0 1rem 1rem;
-    overflow: auto;
-    max-width: 800px;
-    margin: 0 auto;
-    border: 2px solid #10b981;
-  }
-  
-  .module-section {
-    border-top: 1px solid #334155;
-  }
-  
-  .module-title {
-    padding: 1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-    background-color: #0f172a;
-    color: #fff;
-    transition: background 0.3s;
-  }
-  
-  .module-title:hover {
-    background-color: #1b2636;
-  }
+.breadcrumb-item {
+  font-size: 1rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
 
-  .module-section:active {
-    .module-arrow {
-      color: #10b981;
-    }
-    .module-title {
-      color: #10b981;
-    }
+.breadcrumb-item:not(.current):hover {
+  color: #10b981;
+  background-color: rgba(16, 185, 129, 0.1);
+  transform: translateY(-1px);
+}
+
+.breadcrumb-separator {
+  margin: 0 0.5rem;
+  color: #64748b;
+  font-size: 1.2rem;
+}
+
+.breadcrumb-item.current {
+  color: #10b981;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.module-wrapper {
+  max-width: 819.5px;
+  margin: 0 auto;
+}  
+
+.module-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.02rem;
+}
+
+.module-tab {
+  background: #1e293b;
+  padding: 0.75rem 2rem;
+  margin: 0 0.5rem;
+  flex: 1;
+  text-align: center;
+  border-radius: 0.75rem 0.75rem 0 0;
+  color: #cbd5e1;
+  font-weight: 600;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.module-tab:hover {
+  background: #0f172a;
+  color: #10b981;
+  border-color: #cdcdcd;
+}
+
+.module-tab.active {
+  border-color: #10b981;
+  background: #0f172a;
+  color: #10b981;
+}
+
+.module-table {
+  background: #1b2636;
+  border-radius: 0 0 1rem 1rem;
+  overflow: auto;
+  max-width: 800px;
+  margin: 0 auto;
+  border: 2px solid #10b981;
+}
+
+.module-section {
+  border-top: 1px solid #334155;
+}
+
+.module-title {
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  background-color: #0f172a;
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.module-title:hover {
+  background-color: #1b2636;
+}
+
+.module-section:active .module-arrow,
+.module-section:active .module-title {
+  color: #10b981;
+}
+
+.module-arrow {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.subtopics {
+  background: #1e293b;
+  padding: 0.75rem 1.5rem;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.subtopic-row {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid #334155;
+}
+
+.no-data-text {
+  text-align: center;
+  margin-top: 2rem;
+  color: #cbd5e1;
+}
+
+.module-tab-content {
+  width: 800px;
+  margin: 0 auto;
+  padding: 2rem 0 2rem 0;
+  border: 2px solid #10b981;
+  border-radius: 0 0 1rem 1rem;
+  background: #1e293b;
+  color: #cbd5e1;
+  font-size: 1rem;
+  text-align: center;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
   }
-  
-  .module-arrow {
-    margin-right: 0.75rem;
-    font-size: 1.2rem;
-    color: #fff;
+  50% {
+    background-position: 100% 100%;
   }
-  
-  .subtopics {
-    background: #1e293b;
-    padding: 0.75rem 1.5rem;
-    color: #e2e8f0;
-    font-size: 0.95rem;
+  100% {
+    background-position: 0% 0%;
   }
-  
-  .subtopic-row {
-    padding: 0.4rem 0;
-    border-bottom: 1px solid #334155;
-  }
-  
-  .no-data-text {
-    text-align: center;
-    margin-top: 2rem;
-    color: #cbd5e1;
-  }
-  
-  .module-tab-content {
-    width: 800px;
-    margin: 0 auto;
-    padding: 2rem 0 2rem 0 ;
-    border: 2px solid #10b981;
-    border-radius: 0 0 1rem 1rem;
-    background: #1e293b;
-    color: #cbd5e1;
-    font-size: 1rem;
-    text-align: center;
-  }
-  
-  @keyframes gradientShift {
-    0% {
-      background-position: 0% 0%;
-    }
-    50% {
-      background-position: 100% 100%;
-    }
-    100% {
-      background-position: 0% 0%;
-    }
-  }
-  
+}
