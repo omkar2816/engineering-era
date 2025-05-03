@@ -1,6 +1,8 @@
+
 import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import syllabusData from "../data/engineering_syllabus.json";
+import videos from "../data/video.json";
 import "../styles/lecture.css";
 import { motion } from "framer-motion";
 
@@ -17,12 +19,15 @@ export default function Lecture() {
 
   const navigate = useNavigate();
 
+  // Find the branch and subject data from syllabusData
   const branchData = syllabusData.find((b) => b.branch === branch);
   const subjectData = branchData?.subjects.find((s) => s.subjectName === subject);
 
-  const [currentModuleIndex, setCurrentModuleIndex] = useState(initialModuleIndex);
-  const [currentSubtopicIndex, setCurrentSubtopicIndex] = useState(initialSubtopicIndex);
+  // State for current module and subtopic
+  const [currentModuleIndex, setCurrentModuleIndex] = useState(initialModuleIndex || 0);
+  const [currentSubtopicIndex, setCurrentSubtopicIndex] = useState(initialSubtopicIndex || 0);
 
+  // Handle case where branch or subject data is not found
   if (!branchData || !subjectData) {
     return (
       <div className="lecture-container">
@@ -33,16 +38,25 @@ export default function Lecture() {
     );
   }
 
-  const moduleData = subjectData.modules[currentModuleIndex];
-  const subtopic = moduleData?.subtopics[currentSubtopicIndex];
+  // Find the corresponding video data from videos.json
+  // const subjectVideoData = videos.find((v) => v.subjectName === subject);
+  // const moduleVideoData = subjectVideoData?.modules[currentModuleIndex];
+  const moduleVideoData = videos.modules[currentModuleIndex]; 
+  const filename = moduleVideoData?.videoFiles[currentSubtopicIndex];
 
+  // Construct the video URL from the Supabase bucket
+  const videoUrl = filename
+    ? `https://sbkeyhdfbzxdadjywjgy.supabase.co/storage/v1/object/public/videos/${filename}`
+    : null;
+    console.log("Videos JSON:", videos);
+
+  // Handle subtopic click to update the current module and subtopic
   const handleSubtopicClick = (modIndex, subIndex) => {
     setCurrentModuleIndex(modIndex);
     setCurrentSubtopicIndex(subIndex);
   };
 
-  const videoUrl = `https://your-s3-bucket-name.s3.amazonaws.com/${branch}/${subject}/${moduleData.moduleName}/${subtopic}.mp4`;
-
+  console.log("Video URL:", videoUrl);
   return (
     <div className="lecture-container">
       {/* Top Breadcrumb */}
@@ -61,7 +75,9 @@ export default function Lecture() {
                 {mod.subtopics.map((topic, subIdx) => (
                   <div
                     key={subIdx}
-                    className={`lecture-subtopic ${modIdx === currentModuleIndex && subIdx === currentSubtopicIndex ? "active" : ""}`}
+                    className={`lecture-subtopic ${
+                      modIdx === currentModuleIndex && subIdx === currentSubtopicIndex ? "active" : ""
+                    }`}
                     onClick={() => handleSubtopicClick(modIdx, subIdx)}
                   >
                     {`${modIdx + 1}.${subIdx + 1}`} {topic}
@@ -79,13 +95,21 @@ export default function Lecture() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="lecture-title">{subtopic}</h2>
+          <h2 className="lecture-title">
+            {subjectData.modules[currentModuleIndex]?.subtopics[currentSubtopicIndex]}
+          </h2>
 
           <div className="lecture-video-wrapper">
-            <video controls className="lecture-video">
-              <source src={videoUrl} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+            {videoUrl ? (
+              <video controls className="lecture-video">
+                <source src={videoUrl} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <p style={{ textAlign: "center", color: "#cbd5e1" }}>
+                No video available for this subtopic.
+              </p>
+            )}
           </div>
         </motion.div>
       </div>
