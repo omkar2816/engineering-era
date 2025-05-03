@@ -1,115 +1,200 @@
 
-import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import syllabusData from "../data/engineering_syllabus.json";
-import videos from "../data/video.json";
-import "../styles/lecture.css";
-import { motion } from "framer-motion";
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
+import pdfData from "../data/pdf.json";
+import "../styles/pdfViewer.css";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, Download, ExternalLink, Book, Loader } from "lucide-react";
 
 function useQuery() {
   return new URLSearchParams(useLocation().search);
 }
 
-export default function Lecture() {
+export default function PdfViewer() {
   const query = useQuery();
-  const branch = query.get("branch");
   const subject = query.get("subject");
-  const initialModuleIndex = parseInt(query.get("moduleIndex"), 10);
-  const initialSubtopicIndex = parseInt(query.get("subtopicIndex"), 10);
 
-  const navigate = useNavigate();
+  const [isLoading, setIsLoading] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [currentPdfIndex, setCurrentPdfIndex] = useState(0);
 
-  // Find the branch and subject data from syllabusData
-  const branchData = syllabusData.find((b) => b.branch === branch);
-  const subjectData = branchData?.subjects.find((s) => s.subjectName === subject);
+  const subjectData = pdfData.subjects.find(
+    (s) => s.subjectName === subject
+  );
 
-  // State for current module and subtopic
-  const [currentModuleIndex, setCurrentModuleIndex] = useState(initialModuleIndex || 0);
-  const [currentSubtopicIndex, setCurrentSubtopicIndex] = useState(initialSubtopicIndex || 0);
-
-  // Handle case where branch or subject data is not found
-  if (!branchData || !subjectData) {
+  // Check if we have valid data
+  if (!subjectData || subjectData.pdfFiles.length === 0) {
     return (
-      <div className="lecture-container">
-        <p style={{ textAlign: "center", marginTop: "5rem", color: "#cbd5e1" }}>
-          Lecture data not found.
-        </p>
+      <div className="pdf-container">
+        <div className="pdf-empty-state">
+          <Book size={64} className="pdf-empty-icon" />
+          <h2>No Documents Available</h2>
+          <p>No PDF files are available for {subject || "the selected subject"}.</p>
+        </div>
       </div>
     );
   }
 
-  // Find the corresponding video data from videos.json
-  // const subjectVideoData = videos.find((v) => v.subjectName === subject);
-  // const moduleVideoData = subjectVideoData?.modules[currentModuleIndex];
-  const moduleVideoData = videos.modules[currentModuleIndex]; 
-  const filename = moduleVideoData?.videoFiles[currentSubtopicIndex];
+  const pdfFiles = subjectData.pdfFiles;
+  const currentFile = pdfFiles[currentPdfIndex];
+  
+  const pdfUrl = `https://sbkeyhdfbzxdadjywjgy.supabase.co/storage/v1/object/public/pdf/${currentFile}`;
 
-  // Construct the video URL from the Supabase bucket
-  const videoUrl = filename
-    ? `https://sbkeyhdfbzxdadjywjgy.supabase.co/storage/v1/object/public/videos/${filename}`
-    : null;
-    console.log("Videos JSON:", videos);
-
-  // Handle subtopic click to update the current module and subtopic
-  const handleSubtopicClick = (modIndex, subIndex) => {
-    setCurrentModuleIndex(modIndex);
-    setCurrentSubtopicIndex(subIndex);
+  const handleFileChange = (index) => {
+    setIsLoading(true);
+    setCurrentPdfIndex(index);
   };
 
-  console.log("Video URL:", videoUrl);
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  const nextFile = () => {
+    if (currentPdfIndex < pdfFiles.length - 1) {
+      handleFileChange(currentPdfIndex + 1);
+    }
+  };
+
+  const prevFile = () => {
+    if (currentPdfIndex > 0) {
+      handleFileChange(currentPdfIndex - 1);
+    }
+  };
+
+  // Simulate PDF loading completion
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+    
+    return () => clearTimeout(timer);
+  }, [currentPdfIndex]);
+
   return (
-    <div className="lecture-container">
-      {/* Top Breadcrumb */}
-      <div className="lecture-breadcrumb">
-        {branch} → {subject}
+    <div className="pdf-container">
+      <div className="pdf-header">
+        <div className="pdf-breadcrumb">
+          <span className="pdf-subject-name">{subject}</span>
+          <span className="pdf-breadcrumb-separator">/</span>
+          <span className="pdf-file-name">{currentFile}</span>
+        </div>
+        
+        <div className="pdf-actions">
+          <a 
+            href={pdfUrl} 
+            download={currentFile}
+            className="pdf-action-button"
+            title="Download PDF"
+          >
+            <Download size={18} />
+            <span className="pdf-action-text">Download</span>
+          </a>
+          <a 
+            href={pdfUrl} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="pdf-action-button"
+            title="Open in new tab"
+          >
+            <ExternalLink size={18} />
+            <span className="pdf-action-text">Open</span>
+          </a>
+        </div>
       </div>
 
-      {/* Main Content Split */}
-      <div className="lecture-main">
-        {/* Sidebar */}
-        <div className="lecture-sidebar">
-          {subjectData.modules.map((mod, modIdx) => (
-            <div key={modIdx} className="lecture-module">
-              <div className="lecture-module-title">{mod.moduleName}</div>
-              <div className="lecture-subtopics">
-                {mod.subtopics.map((topic, subIdx) => (
-                  <div
-                    key={subIdx}
-                    className={`lecture-subtopic ${
-                      modIdx === currentModuleIndex && subIdx === currentSubtopicIndex ? "active" : ""
-                    }`}
-                    onClick={() => handleSubtopicClick(modIdx, subIdx)}
-                  >
-                    {`${modIdx + 1}.${subIdx + 1}`} {topic}
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Video Area */}
-        <motion.div
-          className="lecture-content"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
+      <div className="pdf-main">
+        <motion.div 
+          className={`pdf-sidebar ${sidebarOpen ? 'open' : 'closed'}`}
+          initial={false}
+          animate={{ 
+            width: sidebarOpen ? '300px' : '50px',
+            minWidth: sidebarOpen ? '250px' : '50px'
+          }}
+          transition={{ duration: 0.3 }}
         >
-          <h2 className="lecture-title">
-            {subjectData.modules[currentModuleIndex]?.subtopics[currentSubtopicIndex]}
-          </h2>
-
-          <div className="lecture-video-wrapper">
-            {videoUrl ? (
-              <video controls className="lecture-video">
-                <source src={videoUrl} type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <p style={{ textAlign: "center", color: "#cbd5e1" }}>
-                No video available for this subtopic.
-              </p>
+          <motion.div 
+            className="pdf-sidebar-toggle"
+            onClick={toggleSidebar}
+            whileHover={{ backgroundColor: "#334155" }}
+            whileTap={{ backgroundColor: "#475569" }}
+          >
+            {sidebarOpen ? <ChevronLeft size={20} /> : <ChevronRight size={20} />}
+          </motion.div>
+          
+          <AnimatePresence>
+            {sidebarOpen && (
+              <motion.div 
+                className="pdf-sidebar-content"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <h3 className="pdf-sidebar-title">Document List</h3>
+                <div className="pdf-files-list">
+                  {pdfFiles.map((file, index) => (
+                    <motion.div
+                      key={index}
+                      className={`pdf-file-item ${index === currentPdfIndex ? "active" : ""}`}
+                      onClick={() => handleFileChange(index)}
+                      whileHover={{ backgroundColor: index === currentPdfIndex ? "#475569" : "#334155" }}
+                      whileTap={{ scale: 0.98 }}
+                    >
+                      <Book size={16} className="pdf-file-icon" />
+                      <span className="pdf-file-name">{file}</span>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
             )}
+          </AnimatePresence>
+        </motion.div>
+
+        <motion.div
+          className="pdf-content"
+          layout
+          transition={{ duration: 0.3 }}
+        >
+          <div className="pdf-navigation">
+            <button 
+              className={`pdf-nav-button ${currentPdfIndex === 0 ? 'disabled' : ''}`}
+              onClick={prevFile}
+              disabled={currentPdfIndex === 0}
+            >
+              <ChevronLeft size={20} />
+              <span>Previous</span>
+            </button>
+            <div className="pdf-pagination">
+              {currentPdfIndex + 1} / {pdfFiles.length}
+            </div>
+            <button 
+              className={`pdf-nav-button ${currentPdfIndex === pdfFiles.length - 1 ? 'disabled' : ''}`}
+              onClick={nextFile}
+              disabled={currentPdfIndex === pdfFiles.length - 1}
+            >
+              <span>Next</span>
+              <ChevronRight size={20} />
+            </button>
+          </div>
+          
+          <div className="pdf-frame-container">
+            {isLoading && (
+              <div className="pdf-loading">
+                <Loader size={40} className="pdf-loading-spinner" />
+                <p>Loading document...</p>
+              </div>
+            )}
+            
+            <div className={`pdf-frame-wrapper ${isLoading ? 'loading' : ''}`}>
+              <iframe
+                className="pdf-frame"
+                src={pdfUrl}
+                title={currentFile}
+                frameBorder="0"
+                allow="fullscreen"
+                onLoad={() => setIsLoading(false)}
+              ></iframe>
+            </div>
           </div>
         </motion.div>
       </div>
