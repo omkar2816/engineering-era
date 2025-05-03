@@ -1,5 +1,6 @@
+
 import React, { useState } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import syllabusData from "../data/engineering_syllabus.json";
 import "../styles/subjectModules.css";
@@ -27,103 +28,114 @@ export default function SubjectModules() {
 
   return (
     <div className="module-container">
-      <div className="module-breadcrumb">{branch} → {subject}</div>
+      {/* Enhanced Breadcrumb Navigation */}
+         {/* Enhanced Breadcrumb Navigation */}
+         <div className="breadcrumb-navigation">
+        <Link to="/" className="breadcrumb-item">Home</Link>
+        <span className="breadcrumb-separator">›</span>
+        <Link to={`/mu-courses`} className="breadcrumb-item">Courses</Link>
+        <span className="breadcrumb-separator">›</span>
+        <Link to={`/mu-importants?branch=${encodeURIComponent()}`} className="breadcrumb-item">{branch}</Link>
+        <span className="breadcrumb-separator">›</span>
+        <span className="breadcrumb-item current">{subject}</span>
+      </div>
+
+
       {/* Tabs */}
       <div className="module-wrapper">
-            <div className="module-tabs">
-            {['curriculum', 'overview', 'instructor'].map(tab => (
+        <div className="module-tabs">
+          {['curriculum', 'overview', 'instructor'].map(tab => (
             <div
-                key={tab}
-                className={`module-tab ${activeTab === tab ? 'active' : ''}`}
-                onClick={() => setActiveTab(tab)}
+              key={tab}
+              className={`module-tab ${activeTab === tab ? 'active' : ''}`}
+              onClick={() => setActiveTab(tab)}
             >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
+              {tab.charAt(0).toUpperCase() + tab.slice(1)}
             </div>
-            ))}
+          ))}
         </div>
 
         <AnimatePresence mode="wait">
-            {activeTab === "curriculum" && (
+          {activeTab === "curriculum" && (
             <motion.div
-                className="module-table"
-                key="curriculum"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.3 }}
+              className="module-table"
+              key="curriculum"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.3 }}
             >
-                {subjectData ? (
+              {subjectData ? (
                 subjectData.modules.map((module, index) => (
-                    <div key={index} className="module-section">
+                  <div key={index} className="module-section">
                     <div
-                        className={`module-title ${openModuleIndex === index ? "open" : ""}`}
-                        onClick={() => toggleModule(index)}
+                      className={`module-title ${openModuleIndex === index ? "open" : ""}`}
+                      onClick={() => toggleModule(index)}
                     >
-                        <span className="module-arrow">{openModuleIndex === index ? "\u25B2" : "\u25BC"}</span>
-                        {module.moduleName}
+                      <span className="module-arrow">{openModuleIndex === index ? "\u25B2" : "\u25BC"}</span>
+                      {module.moduleName}
                     </div>
                     <AnimatePresence>
-                        {openModuleIndex === index && (
+                      {openModuleIndex === index && (
                         <motion.div
-                            className="subtopics"
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: "auto" }}
-                            exit={{ opacity: 0, height: 0 }}
-                            transition={{ duration: 0.3 }}
+                          className="subtopics"
+                          initial={{ opacity: 0, height: 0 }}
+                          animate={{ opacity: 1, height: "auto" }}
+                          exit={{ opacity: 0, height: 0 }}
+                          transition={{ duration: 0.3 }}
                         >
-                            {module.subtopics.map((topic, idx) => (
-                                <div
-                                    key={idx}
-                                    className="subtopic-row"
-                                    onClick={() =>
-                                    navigate(
-                                        `/lecture?branch=${encodeURIComponent(branch)}&subject=${encodeURIComponent(subject)}&moduleIndex=${index}&subtopicIndex=${idx}`
-                                    )
-                                    }
-                                    style={{ cursor: "pointer" }}
-                                >
-                                    {`${index + 1}.${idx + 1}`} &nbsp; {topic}
-                                </div>
-                            ))}
+                          {module.subtopics.map((topic, idx) => (
+                            <div
+                              key={idx}
+                              className="subtopic-row"
+                              onClick={() =>
+                                navigate(
+                                  `/lecture?branch=${encodeURIComponent(branch)}&subject=${encodeURIComponent(subject)}&moduleIndex=${index}&subtopicIndex=${idx}`
+                                )
+                              }
+                              style={{ cursor: "pointer" }}
+                            >
+                              {`${index + 1}.${idx + 1}`} &nbsp; {topic}
+                            </div>
+                          ))}
                         </motion.div>
-                        )}
+                      )}
                     </AnimatePresence>
-                    </div>
+                  </div>
                 ))
-                ) : (
+              ) : (
                 <p className="no-data-text">No module data found for this subject.</p>
-                )}
+              )}
             </motion.div>
-            )}
+          )}
 
-            {activeTab === "overview" && (
+          {activeTab === "overview" && (
             <motion.div
-                key="overview"
-                className="module-tab-content"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
+              key="overview"
+              className="module-tab-content"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
-                <p>Overview content is not specified</p>
+              <p>Overview content is not specified</p>
             </motion.div>
-            )}
+          )}
 
-            {activeTab === "instructor" && (
+          {activeTab === "instructor" && (
             <motion.div
-                key="instructor"
-                className="module-tab-content"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
+              key="instructor"
+              className="module-tab-content"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
             >
-                <p>Instructor info not added</p>
+              <p>Instructor info not added</p>
             </motion.div>
-            )}
+          )}
         </AnimatePresence>
-        </div>
       </div>
-      
+    </div>
   );
 }
